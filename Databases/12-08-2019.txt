@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `warehouse` VARCHAR(10) NOT NULL AFTER `variant_id`;

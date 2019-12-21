@@ -1,0 +1,28 @@
+Database Changes :
+=======================================================================================
+Date : 18th July 2019
+
+Table Name : employee_profile
+
+Changes : Add New Field with named 'ac_num'
+
+--------------------------------------------------------------------------------------
+Query :-
+
+DROP TABLE IF EXISTS `employee_profile`;
+CREATE TABLE IF NOT EXISTS `employee_profile` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(30) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `address` varchar(100) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `region` varchar(50) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `postbox` varchar(20) DEFAULT NULL,
+  `phone` varchar(15) DEFAULT NULL,
+  `phonealt` varchar(15) DEFAULT NULL,
+  `picture` varchar(50) NOT NULL DEFAULT 'example.png',
+  `sign` varchar(100) DEFAULT 'sign.png',
+  `ac_num` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)

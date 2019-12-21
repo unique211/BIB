@@ -1,0 +1,18 @@
+Database Changes :
+--------------------------------------------------------------------------------------------------------------
+
+Table Name : breaktimesforshow
+
+Changes : Allow start_break_time and  end_break_time Fields Default as NULL.
+
+
+DROP TABLE IF EXISTS `breaktimesforshow`;
+CREATE TABLE IF NOT EXISTS `breaktimesforshow` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `start_break_time` time DEFAULT NULL,
+  `end_break_time` time DEFAULT NULL,
+  `detail_id` int(11) NOT NULL,
+  `salesperson_id` int(11) NOT NULL,
+  `show_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=195 DEFAULT CHARSET=utf8;

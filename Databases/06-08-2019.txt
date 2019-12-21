@@ -1,0 +1,25 @@
+CREATE TABLE `product_size` (
+ `p_size_id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(50) NOT NULL,
+ `status` tinyint(1) NOT NULL,
+ PRIMARY KEY (`p_size_id`)
+)
+ALTER TABLE `product_size` CHANGE `status` `status` TINYINT(1) NOT NULL DEFAULT '1';
+
+
+
+ALTER TABLE `products` ADD `item_name` VARCHAR(100) NOT NULL AFTER `product_size`, ADD `variant_id` VARCHAR(100) NOT NULL AFTER `item_name`, ADD `image` VARCHAR(200) NOT NULL AFTER `variant_id`;
+
+
+
+CREATE TABLE `product_material` (
+ `p_material_id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(50) NOT NULL,
+ `status` tinyint(1) NOT NULL,
+ PRIMARY KEY (`p_material_id`)
+)
+ALTER TABLE `product_material` CHANGE `status` `status` TINYINT(1) NOT NULL DEFAULT '1';
+
+
+ALTER TABLE `products` ADD `product_material` VARCHAR(100) NOT NULL AFTER `product_size`;
+ALTER TABLE `products` CHANGE `product_size` `product_size` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;

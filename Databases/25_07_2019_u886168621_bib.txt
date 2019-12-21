@@ -1,0 +1,27 @@
+
+
+
+//changes by arzoo - 14-07-2019
+ALTER TABLE `customers` 
+ADD COLUMN `customers_id` VARCHAR(100) NULL AFTER `balance`;
+
+
+ALTER TABLE `invoices` 
+ADD COLUMN `invoices_id` VARCHAR(100) NULL AFTER `shipping_option`;
+
+
+ALTER TABLE `invoices` ADD `location_id` VARCHAR(100) NOT NULL AFTER `invoices_id`;
+
+
+ALTER TABLE `customers` ADD `extra_fields` VARCHAR(2000) NOT NULL AFTER `customers_id`;
+ALTER TABLE `invoices` ADD `extra_fields` VARCHAR(2000) NOT NULL AFTER `location_id`;
+ALTER TABLE `invoice_items` ADD `extra_fields` VARCHAR(2000) NOT NULL AFTER `product_des`;
+
+
+//changes by arzoo - 25-07-2019
+
+ALTER TABLE `shows` ADD `location_id` VARCHAR(50) NOT NULL AFTER `created_at`;
+ 
+ALTER TABLE `aauth_users` ADD `device_token` VARCHAR(200) NOT NULL AFTER `picture`;
+
+ALTER TABLE `employee_profile` ADD `emp_id` VARCHAR(100) NOT NULL AFTER `sign`;

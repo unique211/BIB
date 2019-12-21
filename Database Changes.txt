@@ -1,0 +1,143 @@
+
+Database Changes as on Date : 11-5-2019
+----------------------------------------------------------
+
+Table : shows 
+
+CREATE TABLE IF NOT EXISTS `shows` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `show_id` varchar(255) DEFAULT NULL,
+  `show_name` varchar(255) NOT NULL,
+  `show_status` enum('Waiting','Pending','Terminated','Finished') NOT NULL DEFAULT 'Waiting',
+  `show_attendence` float NOT NULL,
+  `show_budget` decimal(10,0) NOT NULL,
+  `show_quota` float NOT NULL,
+  `show_assign_to` varchar(255) NOT NULL,
+  `show_start_date` date NOT NULL,
+  `show_end_date` date NOT NULL,
+  `show_setup_date` date NOT NULL,
+  `show_setup_time` time NOT NULL,
+  `show_hourly_wage` float NOT NULL,
+  `show_note` text NOT NULL,
+  `show_tl_commission` float NOT NULL,
+  `show_default_warehouse` int(11) NOT NULL,
+  `show_shipping_option` varchar(30) NOT NULL,
+  `show_tag` text NOT NULL,
+  `show_task_communication` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+*************************************************************
+
+Table : showmeta
+
+CREATE TABLE IF NOT EXISTS `showmeta` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `sid` int(11) NOT NULL,
+  `metakey` int(11) NOT NULL,
+  `meatadata` varchar(200) NOT NULL,
+  `value` varchar(200) NOT NULL,
+  `key3` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `sid` (`sid`),
+  KEY `sid_2` (`sid`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+*************************************************************
+
+Table : showmilestone
+
+CREATE TABLE IF NOT EXISTS `showmilestone` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL,
+  `name` varchar(250) DEFAULT NULL,
+  `sdate` date NOT NULL,
+  `edate` date NOT NULL,
+  `exp` text NOT NULL,
+  `color` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+
+*************************************************************
+
+Table : showtodolist
+
+CREATE TABLE IF NOT EXISTS `showtodolist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `showtaskname` varchar(200) NOT NULL,
+  `showtaskstatus` enum('Due','Done','Progress','') NOT NULL,
+  `showtaskdate` date NOT NULL,
+  `showtaskstart` date NOT NULL,
+  `showtaskdue` date NOT NULL,
+  `showtaskdescription` text NOT NULL,
+  `showtaskeid` int(11) NOT NULL,
+  `showtaskaid` int(11) NOT NULL,
+  `showrelated` int(11) NOT NULL,
+  `showpriority` enum('Low','Medium','High','Urgent') NOT NULL,
+  `sid` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+*************************************************************
+
+Table : storebooth
+
+CREATE TABLE IF NOT EXISTS `storebooth` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `size` varchar(30) NOT NULL,
+  `cost` varchar(30) NOT NULL,
+  `description` text NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `teamleader_id` varchar(200) DEFAULT NULL,
+  `prid` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+*************************************************************
+
+Table : projects 
+Add below Columns : 
+classification 			varchar(30)
+quota 					float
+budget 					float
+employee_id				varchar(250)
+setupdate				date
+hourlyrate				float
+tlcomission 			float
+default_warehouse 		int
+shipping_option 		varchar(30)
+task_communication 		int
+setuptime 				time
+
+Database Changes as on Date : 22-5-2019
+----------------------------------------------------------
+
+Table : Products
+Add belove Columns:
+product_width 			varchar(30)
+product_height 			varchar(30)
+product_lenght 			varchar(30)
+product_weight 			varchar(30)
+color 					varchar(10)
+
+
+
+
+quick_pick 	int(11)
+SKU_number 				varchar(30)
+UPC_barcode 			text
+Package_quanity_in_bx 	int(11)
+
+
+Database Changes as on Date : 20-12-2019
+----------------------------------------------------------
+
+ALTER TABLE shows CHANGE show_status show_status ENUM('Waiting','Pending','Terminated','Finished','Progress') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'Waiting';
+
+ALTER TABLE `employee_profile` ADD `state` VARCHAR(255) NOT NULL AFTER `region`, ADD `zipcode` DECIMAL(6,0) NOT NULL AFTER `state`;
+
+ALTER TABLE `projects` ADD `location` VARCHAR(50) NOT NULL AFTER `setuptime`;
+
+

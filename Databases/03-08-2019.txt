@@ -1,0 +1,7 @@
+ALTER TABLE `show_location` ADD `flooring` VARCHAR(30) NOT NULL AFTER `location`, ADD `electricity` VARCHAR(35) NOT NULL AFTER `flooring`, ADD `website` VARCHAR(250) NOT NULL AFTER `electricity`;
+ALTER TABLE `employee_profile` ADD `referred_by` VARCHAR(50) NOT NULL AFTER `ac_num`;
+ALTER TABLE `shows` ADD `shipping_carrier` VARCHAR(150) NOT NULL AFTER `location_id`;
+ALTER TABLE `products` ADD `prodcut_size` VARCHAR(50) NOT NULL AFTER `item_id`;
+
+
+

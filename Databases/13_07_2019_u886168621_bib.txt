@@ -1,0 +1,25 @@
+Database Changes as on :-
+----------------------------------------------------------
+
+Table Name : transactions
+
+DROP TABLE IF EXISTS `transactions`;
+CREATE TABLE IF NOT EXISTS `transactions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `acid` int(11) NOT NULL,
+  `account` varchar(200) NOT NULL,
+  `type` enum('Income','Expense','Transfer') NOT NULL,
+  `cat` varchar(200) NOT NULL,
+  `debit` decimal(16,2) DEFAULT '0.00',
+  `credit` decimal(16,2) DEFAULT '0.00',
+  `payer` varchar(200) DEFAULT NULL,
+  `payerid` int(11) NOT NULL DEFAULT '0',
+  `method` varchar(200) DEFAULT NULL,
+  `date` date NOT NULL,
+  `tid` int(11) NOT NULL DEFAULT '0',
+  `eid` int(11) NOT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `ext` int(1) DEFAULT '0',
+  `file` text,
+  PRIMARY KEY (`id`)
+)

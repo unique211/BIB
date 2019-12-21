@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `item_id` VARCHAR(100) NOT NULL AFTER `Package_quanity_in_bx`;

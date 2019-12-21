@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `barcode_img` VARCHAR(200) NOT NULL AFTER `warehouse`;

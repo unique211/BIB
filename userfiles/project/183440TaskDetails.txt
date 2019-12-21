@@ -1,0 +1,1342 @@
+GitHub Link : https://github.com/bmartyn/BiB
+7359212088
+Task sheet Link :  https://docs.google.com/document/d/1gOZHQBxwUjh1Y-VrwDfOLqSDQ7GhSiOxbxyDOD-1caA/edit
+
+ASANA : https://app.asana.com/0/1122076281549681/1122076281549683
+
+New Asana Daily Updates  : https://app.asana.com/0/1122057617011452/1122415937824149
+Website Credentials :
+
+Username :	 martyn.benjamin@gmail.com
+
+Password : 	 123456
+---
+FreeLancer Credentials :
+
+Username : pushpak2425
+Password : 
+-----------------------------------------------
+
+DataBase Credentials :-
+
+Url : http://demo.logixbuilt.com/BiB/adminer/
+Database: logixbui_golimo
+username : logixbui_golimo
+password: _}+Rco?d0]&t
+
+
+
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+Business Owner :
+Username : martyn.benjamin@gmail.com
+Password : 123456
+
+Team Leader : 
+Username : test@test.com
+Password : test@test.com
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+As per given link document I am considering below points to do now. (Single form)
+2, 3, 4, 5, 7, 8, 9, 10
+
+Need to skip below points from document.
+1, 6, 11
+
+
+Team Leader = 3
+Business Owner = 5
+Sales Person = 2
+Inventory Manager = 1
+---------------------------------------------------------------------------------------
+
+Project Path : C:\wamp\www\BiB-master
+
+Database Server : Wamp
+
+Database Name : u886168621_bib
+
+Project URL :  http://localhost/BiB-master/
+
+
+----------------------------------------------------------------------------------------
+
+===============================================================================================================================================================
+
+1: Always default payment due date to the order date.
+=> Need to keep only one either Due date or Order date from http://acmesoftware.esy.es/bib/invoices/create ?
+This is a model and controller change. For now, it can be ignored
+
+2: Hide Currency and terms drop downs
+=> Need to hide from http://acmesoftware.esy.es/bib/invoices/create ?
+Yes
+=>  https://www.screencast.com/t/Xd7TZWTogr
+
+
+3: Add dimension fields (Width, Length, Height and Weight)
+=> Add fields on this page http://acmesoftware.esy.es/bib/stockreturn/create
+Correct?
+No. This is to be created in the item master
+http://acmesoftware.esy.es/bib/products/add and edit
+
+=>  https://www.screencast.com/t/5Sf3Ii3JK  for add product page
+=> https://www.screencast.com/t/fyRFxMVCmFb  for edit product page
+
+
+4: Add color master and color selection, size master and selection
+=> Need to add these fields on http://acmesoftware.esy.es/bib/stockreturn/create ?
+No. These need 2 new masters for color and size and the fields have to be selected in http://acmesoftware.esy.es/bib/products/add
+
+=> https://www.screencast.com/t/n7R3Mjp4cq
+
+
+5: Add radio (Warehouse, Store)
+=> Need to add Radio button on http://acmesoftware.esy.es/bib/stockreturn/create ?
+No. http://acmesoftware.esy.es/bib/productcategory/addwarehouse and the edit screen
+=> https://www.screencast.com/t/Rc8EVST8lM for Add warehouse page
+=> https://www.screencast.com/t/6O5tHd2Gga for Edit warehouse page
+
+6: Need to actually allow stock taken from warehouses to be returned to warehouses. Current functionality is for supplier return
+=> I am not exactly getting about this. Could you please explain a bit more?
+We can skip this for now
+
+
+7: SHow/Store
+Add: Radio –Type (Show, Kiosk, Store)-
+=> Need add radio button on http://acmesoftware.esy.es/bib/projects/addproject ?
+Yes 
+ => https://www.screencast.com/t/kCbtZXXVg
+
+
+8: Add booth creation/selection setting per show. Typical fields will be Booth name, size(sq.ft), reference code, cost. Each booth can be linked to 1 product category. Optionally, 1 TL and more than 1SP can be tagged to a booth.
+=> Need to add these fields on http://acmesoftware.esy.es/bib/projects/addproject ?
+Yes. But, we need to create booth master as well
+=> https://www.screencast.com/t/sDJNCUF0cmsTl
+
+9: Hide customer, customer can view, customer can comment, phase, link to calendar
+=> Need to hide above fields from http://acmesoftware.esy.es/bib/projects/addproject ?
+Yes
+=> https://www.screencast.com/t/qTLHD7RfvA 
+
+
+10: Customers/CRM:Remove country from the field list
+=> Need to remove from http://acmesoftware.esy.es/bib/customers/create ?
+Yes
+=> https://www.screencast.com/t/uzTBkE5PI
+
+11: Tasks/Milestones: We need to have 3 templates for each type above. The list of tasks will pre-populate when a show/store is created based on a type. The dates will be blank. The user will need to enter those. Example for show will be
+=> Means need to manage above tasks in 3 Milestones? Please explain this with some more brief.
+We can discuss this later.
+The addproject view does not have the feature to create tasks
+http://acmesoftware.esy.es/bib/projects/explore?id=1
+In this path, you can see the project details and add tasks. I do not want the user to add tasks everytime manually. So, I want to create a set of milestones and tasks, depending on the selection of “show” or “store” by the user when creating the project
+
+
+
+Client last few comments on 29th April 2019
+You need to create 3 new forms for booth, color and size. These are not tag tasks.
+
+Client reply
+I mentioned it has to be like warehouse master. Just a ID and description field for color and size. For booth, it has to have size, trade show (drop down of projects), apart from ID and description
+=> https://www.screencast.com/t/wo2BMc7jey1 For Color Form
+=> https://www.screencast.com/t/jtAzPpc3d For Size Form
+=> https://www.screencast.com/t/bj9bCnMEzLZb For Booth Form 
+
+
+Color & Size inside Stock menu. : https://www.screencast.com/t/HSRZZvfW6fc
+
+Set Booth tab on projects page : https://www.screencast.com/t/ewJlbcKZ
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+FOR NOW, IN THE ADD PROJECT SCREEN - I NEED TO ADD ANOTHER  FIELD AS "HOURLY RATE" AND FOR EACH TEAM LEADER ADDED TO THE PROJECT, WE NEED A NEW TAB, "TL COMMISSION %", WHERE THEY CAN ENTER COMMISSION % PER TEAM LEADER.
+ALSO, IN THE EMPLOYEE MASTER, I NEED TO ADD 1 FIELD AS SSN
+
+And, in the employee and customer master, I want a separate tab (like how you did with booths), named "Notes". Where they can enter notes. There will be 3 main fields: Note date, Note text, reminder date. Note date will default to system date when the note is added
+
+http://acmesoftware.esy.es/bib/employee/add
+
+http://acmesoftware.esy.es/bib/customers/create
+
+http://acmesoftware.esy.es/bib/transactions/createcat
+In this screen and the edit for this, I want to add a category field as radio "Income", "Expense"
+
+These are some other tasks. I have many more to be done. First step will be UI. Then will be model and controller changes
+
+
+martyn.benjamin, 7:30 PM
+
+Some other screens to be worked are:
+1) List of projects for team leader to apply and see status.
+2) For business owner, list of team leaders to approve for a project
+3) Another tab in projects, to list sales persons assigned and for each sales person, break timings can be set.
+4) picking list and consignment list to be designed
+5) Team leader transfer screen to be designed
+
+-----------------------------------------------------------
+
+First question - SSN - yes, that's the correct page. 
+
+Second question - new tab - no. I want the notes per employee or customer. Which means it has to be in the edit page
+For employees... http://acmesoftware.esy.es/bib/employee/view?id=10
+In this you can see there are 6 icons. First one is orders. We can add one between orders and transactions as "notes"
+
+http://acmesoftware.esy.es/bib/employee/view?id=10
+
+
+For customers, it will be on the edit customer page
+
+ 
+=============================================================================================================================================================
+
+
+=>	I need to add another  field as "Hourly rate" and for each team leader added to the project, we need a new tab, "TL commission %", where they can enter commission % per team leader.
+Also, in the employee master, I need to add 1 field as SSN
+
+
+=>I need to add another  field as "Hourly rate".
+Live Link : http://acmesoftware.esy.es/bib/employee/add
+Local Link : http://localhost/BiB-master/index.php/employee/add
+
+SS : https://www.screencast.com/t/kbHlnnAyQlHv Add field as "Hourly rate".
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+=>we need a new tab, "TL commission %", where they can enter commission % per team leader.
+Live Link : http://acmesoftware.esy.es/bib/projects/explore?id=1
+
+Local Link : http://localhost/BiB-master/index.php/employee/add
+SS : https://www.screencast.com/t/kbHlnnAyQlHv Add field as "Hourly rate".
+
+Local Link : http://localhost/BiB-master/index.php/employee/add
+SS : https://www.screencast.com/t/7SewaA1eo Add SSN Field 
+
+=>Local Link : http://localhost/BiB-master/index.php/projects/explore?id=1
+SS : https://www.screencast.com/t/srJdRo4Yu Add New Tab TL Commission.
+
+=>Local Link ; http://localhost/BiB-master/index.php/TLCommision
+SS : https://www.screencast.com/t/dMfEL1qii Add new Form TLCommision.
+
+=>Local Link : http://localhost/BiB-master/index.php/transactions/createcat
+SS : https://www.screencast.com/t/kzTFWUbkVUQI Add new radio options.
+
+=>Local Link : http://localhost/BiB-master/index.php/projects/explore?id=1
+SS : https://www.screencast.com/t/mHPrftkAiWwd Create new tab for sales person
+
+=>Local Link : http://localhost/BiB-master/index.php/SetBreakTime
+SS : https://www.screencast.com/t/S12AwIBvx63 Create Form for set Break time.
+
+=>Local Link : http://localhost/BiB-master/index.php/employee/view?id=10
+SS : https://www.screencast.com/t/moPyCPtK Create new option Notes for employee.
+
+=>Local Link : http://localhost/BiB-master/index.php/employee/notes?id=10
+SS : https://www.screencast.com/t/y8bTLuwJE6H Create page for display notes for employee.
+
+=>Local Link : http://localhost/bib/index.php/employee/addnotes?id=10
+SS : https://www.screencast.com/t/HOt96rQM Create page for notes in employee master.
+
+=>Local Link : http://localhost/BiB-master/index.php/employee/editnotes?id=10
+SS : https://www.screencast.com/t/HphaTelj Create page for edit notes in employee master.
+
+=>Local Link : http://localhost/BiB-master/index.php/customers/edit
+SS : https://www.screencast.com/t/JSUzikhNx Add Tabs in Customer edit page.
+
+=>Local Link : http://localhost/BiB-master/index.php/customers/addnotes?id=
+SS : https://www.screencast.com/t/X3R3ZwZz Create form for add notes by customer. 
+
+=>Local Link : http://localhost/BiB-master/index.php/customers/editnotes
+SS : https://www.screencast.com/t/32gCbUPvZ
+
+
+Done.
+=============================================================================================================================================================
+CHANGES : 
+
+Link :
+http://localhost/bib/index.php/projects/setbreaktime
+
+http://localhost/bib/index.php/projects/tlcommission
+
+http://localhost/bib/index.php/projects/addbooth
+
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+Date : 2nd May 2019
+
+Query responses:
+1) List of projects for team leaders to apply -> there is no screen right now which lists these. But, the BusinessOwner login (which you have right now) shows the list of projects, when you go to the show/store menu. The changes needed include:
+a) allow the team leader role to see that menu. But, without create and edit rights
+b) Bring this link to the top of the menu options  for the team leader role
+c) Allow them to see details in a view mode, and choose an "apply" button
+d) Show all the teamleader who applied to the "BusinessOwner" role, when they open a project
+
+2) Replied in the previous message
+
+Picking/Consignment list - will send a mock-up tomorrow
+Team leader transfer - will send the details tomorrow
+
+
+
+Hourly rate - this was supposed to be added to projects. Not employee.
+SSN - this is fine
+Add tabs in customer is correct. 
+But, Notes by businessowner is a new page, without being in a tab
+Break time - the date for the break time has to be selected
+TL commission% should not be a new tab. its one fields on the main addproject view. Also, no need to choose the teamleader. It's just a general field
+Salesperson tab is fine. But, I cannot find a way to add sales person to the show/project
+Transaction is fine
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The teamleaders should be able to apply for a project (similar to freelancer.com). But, in this case, the teamleader sees a list of projects posted by the BusinessOwner, and can see the following details:
+1) Location
+2) Name
+3) Start date and end date
+4) Already assigned or not (this is based on the status of the project). 
+If the project is in "Waiting" or "Pending" status,  the team leader can apply for the project. If the project is in any other status, the teamleader will see status "This show is assigned to another Teamleader"
+All projects will be listed as a grid, similar to how the current manage shows/store listing is:
+http://acmesoftware.esy.es/bib/projects
+Except the fields displayed will be the above 4. 
+So, the apply button will only be visible to the team leader, on the right side of the listing, similar to how the "view", "edit", "delete" icons are visible to the businessowner.
+The team leader cannot edit or delete the project. Also, they cannot view the details visible to the business owner
+====================================================================
+
+Changes :
+
+1)Hourly Rate removed from employee add-page and add into project add and edit page.
+
+=>Add new field named 'Hourly rate' in add-project and edit-project page.
+Local Link : http://localhost/bib/index.php/projects/addproject
+SS : https://www.screencast.com/t/aG8IVyo4gDz 
+Local Link : http://localhost/bib/index.php/projects/edit
+SS : https://www.screencast.com/t/mDF9jlS0
+
+2)TL Commission tab is removed from project-explore page and add into project-add and edit page.
+
+=>Add TL Commission page into add-project and edit-project page.
+Local Link :  http://localhost/bib/index.php/projects/addproject
+SS : https://www.screencast.com/t/9QqGL9G7HZ6
+Local Link : http://localhost/bib/index.php/projects/edit
+SS : https://www.screencast.com/t/kxNqr1ge
+
+3) Changes for team leader 
+
+Local Link : http://localhost/bib/index.php/projects/
+SS : https://www.screencast.com/t/8bs37WZD
+
+
+=======================
+Queries :-
+
+=>  Show all the team leader who applied to the "BusinessOwner" role, when they open a project - you want to display Team Leader list in Assign To field which is in projects/addproject page ?
+=>  Allow them to see details in a view mode, and choose an "apply" button - where I can find Apply button for this ?
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ Hourly rate - label should be Hourly Minimum wage
+Team leader - project view:
+1) They should not see the link for "new store/show"
+2) They should not see the widgets on the top of the page
+
+
+As you say : They should not see the widgets on the top of the page, You talking about this icon boxs which I mentioned below Link ?
+=>https://www.screencast.com/t/0OC6xTgWMMm5
+
+==============================================================
+
+=>Local Link : http://localhost/bib/index.php/projects/
+
+Is This Below mentioned changes is correct ?
+
+1)Remove "new store/show" Links and widget
+=> https://www.screencast.com/t/ecvPZjyy8cV0
+
+2)Change Hourly Rate Label named with Hourly Minimum wage.
+=> https://www.screencast.com/t/pfHlOjlQ 
+
+Query :-
+-----------------------------------------------------------------------------------------
+1) List of projects for team leaders to apply - where this list I should add ?
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+Date : 3rd May 2019
+
+Break time logic (point 2) is wrong. I said the user should be able to select the date and also the start and end time for breaks. There can be multiple breaks per day
+
+If the show start date is 10/05/2019 and end date is 20/05/2019, for each sales person, they should be able to set multiple breaktimes on each of those dates
+
+EACH DAY CAN HAVE MULTIPLE BREAKTIMES. EACH BREAKTIME HAS A START TIME AND END TIME.
+SO, FOR SALESPERSON A, FOR 10/05/2019, FIRST SLOT CAN BE 10:00AM TO 10:20AM, SECOND CAN BE 01:00PM TO 01:30PM AND THIRD CAN BE 04:00PM TO 04:30PM
+
+=====> https://www.screencast.com/t/0D2LkUMjfX
+
+--------------------------------------
+Please also refer my earlier comments about team leader commission % - I had asked for a tab, and input of commission per team leader. we right now have 1 field. 
+
+=>Local Link : http://localhost/BiB-master/index.php/projects/explore?id=1
+SS : https://www.screencast.com/t/srJdRo4Yu Add New Tab TL Commission.
+
+We also still don't have the business owner view of projects updated to approve team leaders who apply, apart from the packing list, consignment list and team leader transfer screens
+FOR NOW, IN THE ADD PROJECT SCREEN - I NEED TO ADD ANOTHER  FIELD AS "HOURLY RATE" AND FOR EACH TEAM LEADER ADDED TO THE PROJECT, WE NEED A NEW TAB, "TL COMMISSION %", WHERE THEY CAN ENTER COMMISSION % PER TEAM LEADER.
+
+=> https://www.screencast.com/t/pth0pM4hB1IQ
+
+Also, please ensure the files you have worked on are pushed to Git
+
+
+
+Below mentioned view page is proper for set break time ?
+=>https://www.screencast.com/t/0D2LkUMjfX
+
+Query :
+-----------------------------------------------------------------------
+As you say - I had asked for a tab, and input of commission per team leader.
+1)where you want Tab for manage commission per team leader.
+ are you talking about this :  https://www.screencast.com/t/srJdRo4Yu  ?
+2)Should I create new page for business owner view of projects updated to approve team leaders who apply ?
+
+
+-------------------
+------------------
+
+: we also need to add 1 more field to the addproject -  Shipping option
+A radio with 2 options: Ship, Pick-up
+(16:53) cp: Apart from this, we need a new location details tab on the project as well, which has 2 inputs:
+1) A radio for Indoor/Outdoor
+2) A Google maps div, where they can type address see the result picked on the map
+---------------------------------------------------------------
+
+http://acmesoftware.esy.es/bib/productcategory/warehouse
+
+1) New tab in project as mentioned above 
+=> https://www.screencast.com/t/0polp2UnRy9 // for business owner.
+=> https://www.screencast.com/t/ro1IpOIYX   // For Team Leader
+2) A drop down on addproject for selection of default warehouse (from list of warehouses, which are of type warehouse)
+=> https://www.screencast.com/t/quWJ0MaC // add warehouse field
+3) We will have to list all the items/products in that warehouse on the new tab, as shown in the picture. The fields on top, show #, date, show name, manager, ship to/picked up by are not needed.
+If the product has a color set for it, the color column will be displayed. (in the example, the right side are products which have color, and left side does not)
+There are 2 qty fields as shown. One is the amount being requested. The second is the amount approved by business owner. The team leader cannot edit the second qty field. And the businessowner cannot edit the first qty field
+
+
+===========================================================================================================================================================
+===========================================================================================================================================================
+===========================================================================================================================================================
+0) Create Page for set Break Time 
+=> https://www.screencast.com/t/0D2LkUMjfX
+Today Completed Task :
+
+------------------------------------------------------------------------------------------------------
+
+1)Create new page for display list of projects with team leaders and with approve and reject option.
+=> https://www.screencast.com/t/g0rtNLEmi5r1
+2)Create new page for set break time.
+=> https://www.screencast.com/t/0D2LkUMjfX
+3)Create new tab named Packing List.
+=> https://www.screencast.com/t/wMzuRY9pV // For Business owner.
+=> https://www.screencast.com/t/cKK9jqcWeBY //For Team Leader
+4)Create new radio option named shipping option : 
+=> https://www.screencast.com/t/NlwvEpLGck
+5)Add Flax box checkout
+=> https://www.screencast.com/t/08zCWfs8HK
+6)Create new tab named approve team leader
+=>https://www.screencast.com/t/8ZDqDyzE4NpA
+
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+Date : 6th May 2015
+
+1)Application Config > Config.php Change base url
+2)View > User > index.php > Change Login post Url.
+3)View > Projects ? addproject > remove Link to calender link.
+
+Queries :
+
+1)Size and Color Table :
+2)Location and Sales Person Tab not working.
+
+-----------------------------------------------------------------
+
+
+Changed File :
+
+1. products > product-add
+2. products > warehouse_add
+3. projects > addproject
+4. customers > create
+5. projects > explore
+6. transactions > cat_create
+7. employee > add
+8. employee > view 
+9. employee > notes
+10. employee > editnotes
+11. employee > addnotes
+12. customers > edit
+13. customer > editnotes
+14. customers > addnotes
+15. projects > editproject
+16. project > index.php
+17. product > warehouse
+
+==================================================================================================================
+
+1.Add product 
+2.Edit product
+3.Display product
+4.Add warehouse for product
+5.Edit warehouse for product
+6.Display warehouse for product 
+7.Create customer
+8.Edit customer 
+9.Display customer
+10.Explore project
+	-Add location 
+	-Add booth
+	-Display booth
+	-Manage packing list
+	-Display sales person 
+	-Add break time
+	-Approve team leader for projects.
+11.Add category for transaction 
+12.Edit and display category for transaction 
+13.Add employee
+14.Edit employee
+15.View employee
+16.Display notes for employee
+17.Add notes for employee
+18.Edit notes for employee
+19.Display notes for customer
+20.Add notes for customer
+21.Edit notes for customer
+22.Add project
+23.Edit project
+24.Display project
+25.Manage widget.
+
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Date : 7th May 2019.
+
+Also, all screens under the project view should have the "Show #" and "Show name" on top, above the tabs.
+
+
+Also, we need to redesign the add project screen.
+We will have 2 copies of the add project screen. 
+One for shows and one for stores
+The shows should look like this:
+
+
+I also want to merge tasks, milestones, thread into 1 main tab - "Communication". When I open that tab, these 3 should be sub tabs - milestone will be first, tasks second, and thread last
+
+
+Also, the order for the tabs inside project will be:
+Summary
+Location
+Booth
+Communication
+Team Leaders
+Activity Log
+Files
+Break timings
+Packing list
+Notes
+Orders
+Comments
+
+Add/edit item/ Product form needs to include SKU number, UPC Barcode, Package Quantity in Box
+
+On the top left of the screen, the title - "Add Show" - on All the pages, this should be about 60% bigger as a font size than the current font size. If the current size is 3, it should be 5. 
+
+---
+
+On the left menu, the new show/store menu should be renamed New Show.
+The manage shows/stores, should be renamed Manage Shows
+
+And we should have 2 new links there, for "New Store" and "Manage Stores".
+
+The "New store" link will have the radio on top for "Kiosk" and "Store", like the old layout, and will not have Show# or "Show" radio option. 
+It will also not have end date, attendance as fields in the add project screen. Those 2 fields will be only in "New Show". The location tab for stores, will not have Flooring input field. Also, the Booth tab will not be there for the stores. 
+
+At the modal and controller level, we will use the same code. Only the view will be different
+
+
+------------------------------------------------------------------------------------------------------
+
+Completed Task :
+
+1) Change Tab position as mentioned above
+
+2) Create new Tab named Communication and add three new sub-tab in it named Milestone, Tasks and Thread.
+
+=> https://www.screencast.com/t/QPJvijhcY
+
+3) Create new page for show project 
+
+=> https://www.screencast.com/t/cUjVw5gxN6C
+
+4) Add "Show #" and "Show Name" in all project tabs.
+
+=> https://www.screencast.com/t/3ysOjTpGPh
+
+-----------------------------
+
+7) On the left menu, the new show/store menu should be renamed New Show and The manage shows/stores, should be renamed Manage Shows.
+=> https://www.screencast.com/t/MAAMxFsmYWP
+
+
+-------------------------------------------------------------------------------------------
+
+Hi Sir, Please Send this to Benjamin
+
+Could you please check belove given changes is correct or not ?
+
+1)Change Tab position as said
+=>https://www.screencast.com/t/BtqRpKAn
+2)Create new Tab named Communication and add three new sub-tab in it named Milestone, Tasks and Thread.
+=> https://www.screencast.com/t/QPJvijhcY
+3)Create new page for show project 
+=> https://www.screencast.com/t/cUjVw5gxN6C
+4)Add "Show #" and "Show Name" on all project tabs.
+=> https://www.screencast.com/t/3ysOjTpGPh
+5)Add new fields in add product page 
+=> https://www.screencast.com/t/WfQugiXnnC3
+6)Add new Fields In edit product page
+=> https://www.screencast.com/t/hkfSuqPM6JWF
+
+-----------------------------
+
+7) On the left menu, the new show/store menu should be renamed New Show and The manage shows/stores, should be renamed Manage Shows.
+=> https://www.screencast.com/t/MAAMxFsmYWP
+
+8)2 new links there, for "New Store" and "Manage Stores".
+=> https://www.screencast.com/t/N928la3h4f
+
+9)The "New store" link will have the radio on top for "Kiosk" and "Store", like the old layout, and will not have Show# or "Show" radio option.
+=>https://www.screencast.com/t/N4ShAxQtsJ
+
+10)It will also not have end date, attendance as fields in the add project screen.
+=>https://www.screencast.com/t/K4pQmfjjKp
+
+11) The location tab for stores, will not have Flooring input field.
+=>https://www.screencast.com/t/qr6RFXKA
+
+12) The Booth tab will not be there for the stores.
+=>https://www.screencast.com/t/pdnA5YwrhOdE
+
+As benjamin say, This font size is correct ?
+=> before change : https://www.screencast.com/t/0wpDTGeuoa 
+=> after change : https://www.screencast.com/t/pzHtbRvnn8oo
+
+
+1) On the left menu, the new show/store menu should be renamed New Show and The manage shows/stores, should be renamed Manage Shows.
+=> https://www.screencast.com/t/MAAMxFsmYWP
+
+2)2 new links there, for "New Store" and "Manage Stores".
+=> https://www.screencast.com/t/N928la3h4f
+
+3)The "New store" link will have the radio on top for "Kiosk" and "Store", like the old layout, and will not have Show# or "Show" radio option.
+=>https://www.screencast.com/t/N4ShAxQtsJ
+
+4)It will also not have end date, attendance as fields in the add project screen.
+=>https://www.screencast.com/t/K4pQmfjjKp
+
+5) The location tab for stores, will not have Flooring input field.
+=>https://www.screencast.com/t/qr6RFXKA
+
+6) The Booth tab will not be there for the stores.
+=>https://www.screencast.com/t/pdnA5YwrhOdE
+
+7)Setup time has to be below setup date.
+=> https://www.screencast.com/t/1koz6YyR
+
+8)Change "view" mode of the summary.
+=>https://www.screencast.com/t/FhhNQKKSwL
+
+lease check below given Pop-up model for set Break Time. 
+=> https://www.screencast.com/t/IaOPvKmtBM
+
+After Successfully entered these fields which are given in Pop-up model,Break time fields for each day will be display on page. (Currently working on this..)
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+Date : 8th May 2019
+
+Also, all screens under the project view should have the "Show #" and "Show name" on top, above the tabs.
+
+Show # and Show name - there are supposed to display the current active show's details. The screen shot of location you sent was supposed to be for store - For a store, it should show Store name
+
+A new Tab called Attendees on projects. Only display. No input. It can Display on the first Column the person's name, second column: Title (teamleader, salesperson, businesowner), third column: Booth, 4th column: Product Category. Any person's name can be clicked on and it can open up modal popup with details such as  total sales and hours worked per date.
+
+From benjamin : 
+All screens under project view, if under the show copy of project. If under the store copy of project, it should have store name
+
+-------------------------------------------------------
+
+1) Create new tab named attendees in project explore page.
+=> https://www.screencast.com/t/52pdoD8oeY2
+2) Create Model in Sales person name click event
+=> https://www.screencast.com/t/cR3ocVLXCB
+3) Changes in Show # and Show name.
+=> Remove Show # and Show Name from all tabs and display that on top of the all project pages.
+=> 
+4)On the top left of the screen, the title - "Add Show" - on All the pages, this should be about 60% bigger as a font size than the current font size. If the current size is 3, it should be 5. 
+=>complete
+5)
+ 
+Is These Changes are correct ?
+=> I remove Show # and Show Name form all tabs and put it on top of all the project pages with show name.
+=> https://www.screencast.com/t/pCiVfHo7
+
+
+As you say earlier that all screens under the project view should have the "Show #" and "Show name" on top, above the tabs.
+This below changes are correct ? 
+=> https://www.screencast.com/t/wfslVqmXlEUV
+
+As you say for Show pages, Show # and Show Name and for store pages Store # and Store Name will be display dynamically.
+
+In the projects/index page
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Please check below screen shots.
+
+Create new tab named attendees on project page.
+=> https://www.screencast.com/t/52pdoD8oeY2
+
+Add Model in Attendees tab.
+=> https://www.screencast.com/t/cR3ocVLXCB
+
+Screen Shot for updated summary tab.
+=> https://www.screencast.com/t/fErpKW175b5k 
+
+------------------------------------------------------------------------------------------------------------------------
+
+*Please check below changes*
+
+*Screen shot of updated attendees tab*						
+
+=> https://www.screencast.com/t/4UEOdWUCIz
+
+*Screen Shot for Store*
+
+1)Create new page for add task for store and add Store # and Store name.
+
+=> https://www.screencast.com/t/Zny8GwkkwH		
+
+2)Create new page for add milestone for store	add Store # and Store name 
+
+=> https://www.screencast.com/t/A4IocQwfp5OI
+
+3)Create new page for add activity for store and add Store # and Store name 	
+
+=> https://www.screencast.com/t/cZ7D597B8C
+
+4)Create new page for set break time and add Store # and Store name 	
+
+=> https://www.screencast.com/t/k9iyLGEFi
+
+5)Create new page for add booth and add Store # and Store name 			
+
+=> https://www.screencast.com/t/QAuFoYT49
+
+6)Create new page for approve Team Leader for Store and add Store # and Store name on page
+
+=> https://www.screencast.com/t/uARIidiB1
+
+==================================================================================================================================================================================================================================================================================================================================
+Project :-
+
++ Classification
++ Budget 
++ Quota
+- End Date
++ Setup Date
++ Setup Time
+- Priority
+- Progress
+- Phase 
+- cid
++ Hourly minimum wage
++ TL Commission 
++ Warehouse Id 			(FK)
++ Shipping Type
++ Team Leader Id 		(FK)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task (New) :-
+
+Id						(PK)
+Type					show/store
+Show/Store Id 	 		(FK) 
+Task Title
+Task Status
+Task priority
+Milestone Id			(FK)
+Start Date
+Due Date
+Team Leader Id 			(FK)
+Description
+Created At
+Updated At
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Location (New) :-
+
+Id 						(PK)
+user_id					(FK)
+Type					 show/store
+Show/Store Id 	 		(FK)
+Location Type			indoor/outdoor
+Address					
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Milestone :-
+
++ Type					 show/store
++ user_id					(FK)
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Activity (New) :-
+
+Id						(PK)
+Type					show/store
+Show/Store Id 	 		(FK)
+user_id					(FK) 
+Activity Title 			
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Files (NEW) :-
+
+Id						(PK)
+Type					show/store
+Show/Store Id 	 		(FK)
+File Name 
+user_id					(FK)
+File URL
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Break Time (NEW) :-
+
+Id 						(PK)
+Type					show/store
+Show/Store Id 	 		(FK)
+Date
+user_id					(FK)
+Work Start Time
+Work End Time
+Sales Person Id 		(FK)
+Break Start Time
+Break End Time
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Notes (NEW) :-
+
+Id 						(PK)
+Type					show/store
+Show/Store Id 	 		(FK)
+Notes 	
+user_id					(FK)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Comments (NEW) :-
+
+Id 						(PK)
+Type					show/store
+Show/Store Id 	 		(FK)
+Comments 	
+user_id					(FK)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+==========================================================================================================================================================
+==========================================================================================================================================================
+==========================================================================================================================================================
+==========================================================================================================================================================
+
+Date 13th May 2019
+
+1)Add contact info to location tab - Design only
+-	In Show Explore Page Add new fields in location tab
+	=> https://www.screencast.com/t/jJOiuvELxjFj
+-	In Store Explore Page Add new fields in location tab
+	=> https://www.screencast.com/t/98sqw1ew8
+	
+	For Store :
+	=> https://www.screencast.com/t/ZEw4GppsOjM
+	For Show :
+	=> https://www.screencast.com/t/274CW1MN
+----------------------------------------------------------------------------------
+2)Consignment list output design - Design only
+-	Create Page for Consignment List 
+	=> https://www.screencast.com/t/8ymEtqHIPy 
+----------------------------------------------------------------------------------
+3)Shipment pallet report - Design only
+-	Create page for output based on the packing list quantities which are approved by the business owner (based on request from team leader). 
+	=> https://www.screencast.com/t/BSlTjPaeGHRb
+	=> https://www.screencast.com/t/w7aYYQwroC
+	=> https://www.screencast.com/t/4Pzz1eksJe
+----------------------------------------------------------------------------------
+4)Shipment labels - Design only
+-	Create page for 'show sales' 
+	=> https://www.screencast.com/t/l3mKZdnlO
+	=> https://www.screencast.com/t/vlKSkK3T
+	=> https://www.screencast.com/t/YzlzJSObF
+-	Create page for 'store sales'
+	=> https://www.screencast.com/t/qgMeGiCjMt
+	=> https://www.screencast.com/t/tx3IVsRE3Fx0
+	=> https://www.screencast.com/t/JxvcMKGfHNUI
+----------------------------------------------------------------------------------
+5)Commission report - Design only
+-	Create page for - Commission report
+	=> https://www.screencast.com/t/CHgOZwQ5bHa
+	=> https://www.screencast.com/t/mL1YqLX7
+	=> https://www.screencast.com/t/MsOG9t2tlNZE
+	=> https://www.screencast.com/t/5j1ahAZTaFm6
+	=> https://www.screencast.com/t/2UWqboqCMZlH
+	=> https://www.screencast.com/t/fTk9asjhtW
+	=> https://www.screencast.com/t/p8lQHs1DkD
+	=> https://www.screencast.com/t/ABIWd8v3kmZS
+	=> https://www.screencast.com/t/aRpuH8Dbt6dY
+----------------------------------------------------------------------------------
+6)remove radio field from Show Sale page and Store Sale page.
+=> https://www.screencast.com/t/z84Lkr4XS
+=> https://www.screencast.com/t/z84Lkr4XS
+
+1.CONSIGNMENT LIST
+=> https://www.screencast.com/t/8ymEtqHIPy
+2.Calculation for pallet shipment
+				
+=> https://www.screencast.com/t/BSlTjPaeGHRb
+=> https://www.screencast.com/t/w7aYYQwroC
+=> https://www.screencast.com/t/4Pzz1eksJe
+
+
+3.Shipment Label
+
+URL : http://localhost/bib/index.php/reports/show_sales	// For Show
+
+=> https://www.screencast.com/t/RgDGGE4Ds
+=> https://www.screencast.com/t/bCEcJGKomo
+
+
+URL : http://localhost/bib/index.php/reports/store_sales //for Store
+=> https://www.screencast.com/t/aKdCjUXS2
+=> https://www.screencast.com/t/dQOfx3zJiVJH
+
+
+Hi,
+
+Following are the updates for Task Assigned by Benjamin for 'Bamboo is Better' as on 13th May, 2019 :
+
+List of Completed Tasks :
+
+    Add contact info to location tab - Design only [Done]
+        In Store Explore Page Add new fields in location tab
+             For Store :
+                  https://www.screencast.com/t/ZEw4GppsOjM
+             For Show :
+                 https://www.screencast.com/t/274CW1MN
+    Consignment list output design - Design only [Done]
+        Create Page for Consignment List
+             https://www.screencast.com/t/8ymEtqHIPy 
+    Shipment pallet report - Design only [Done]
+         Create page for output based on the packing list quantities which are approved by the business owner (based on request from team leader).
+             https://www.screencast.com/t/BSlTjPaeGHRb
+             https://www.screencast.com/t/w7aYYQwroC
+             https://www.screencast.com/t/4Pzz1eksJe
+    Shipment labels - Design only [Done]
+        Create page for 'show sales' 
+             https://www.screencast.com/t/l3mKZdnlO
+             https://www.screencast.com/t/vlKSkK3T
+             https://www.screencast.com/t/YzlzJSObF - Create page for 'store sales'
+             https://www.screencast.com/t/qgMeGiCjMt
+             https://www.screencast.com/t/tx3IVsRE3Fx0
+             https://www.screencast.com/t/JxvcMKGfHNUI
+    Commission report  Design only [Done]
+         Create page for - Commission report
+             https://www.screencast.com/t/CHgOZwQ5bHa
+             https://www.screencast.com/t/mL1YqLX7
+             https://www.screencast.com/t/MsOG9t2tlNZE
+             https://www.screencast.com/t/5j1ahAZTaFm6
+             https://www.screencast.com/t/2UWqboqCMZlH
+             https://www.screencast.com/t/fTk9asjhtW
+             https://www.screencast.com/t/p8lQHs1DkD
+             https://www.screencast.com/t/ABIWd8v3kmZS
+             https://www.screencast.com/t/aRpuH8Dbt6dY
+
+Please check with the latest updates and let us know your thoughts for the same.
+
+Thanks
+==========================================================================================================================================================
+==========================================================================================================================================================
+==========================================================================================================================================================
+==========================================================================================================================================================
+Date : 14th May 2019 :-
+
+1) Add radio button on invoices/create page.
+URL : http://localhost/bib/index.php/invoices/create?project=1
+=> https://www.screencast.com/t/tK4owNI4a
+----------------------------------------------------------------------------
+2) Expense record form copy to be under show
+URL : http://localhost/bib/index.php/projects/exploreshow?id=2
+=> https://www.screencast.com/t/8blQBtlHSs0V
+=> https://www.screencast.com/t/CpZCqQyvuBs
+-----------------------------------------------------------------------------
+3) Settings screen for user access to screens - Design only
+URL : http://localhost/bib/index.php/settings/user_role
+=> https://www.screencast.com/t/3yIYX3ZYIOB 	//user_role page
+=> https://www.screencast.com/t/fS3NL11D // For Team Leader Role
+-----------------------------------------------------------------------------
+
+4) Team leader to sales person - requisition flow (requisition list) - Design only
+URL : http://localhost/bib/index.php/projects/exploreshow?id=2
+Create new tab for Team leader where they can approve product requests which requested by sales person. 
+=> https://www.screencast.com/t/HfY5gzeL
+Create new Explore page for sales person and create new tab and Packing List 
+URL : http://localhost/bib/index.php/Salesperson/explore?id=4
+=>https://www.screencast.com/t/ZmFnVCeyA2
+------------------------------------------------------------------------------
+
+5)Add Show # and Show Name in Expense Page .
+http://localhost/bib/index.php/reports/expensestatement?id=2
+=> https://www.screencast.com/t/LBygGqumDb
+
+
+URL : http://localhost/bib/index.php/projects/exploreshow?id=2
+
+Please Check Below Links for Team leader to sales person.
+
+Create new tab for Team leader where they can approve product requests which requested by sales person. 
+=> https://www.screencast.com/t/HfY5gzeL
+
+Create new Explore page for sales person and create new tab named Packing List where they can request product quantity.
+=>https://www.screencast.com/t/AtzbCNBg1CFw
+
+
+When Request approved by Team Leader button named Confirm Receipt will be display and if not given any response by team leader then button named Requested will be display.
+
+Please check below changes for sales person packing list side.
+=> https://www.screencast.com/t/ZmFnVCeyA2
+
+Hi,
+
+Following are the updates for Task Assign for 'Bamboo is Better' as on 14th May, 2019 :
+
+*List of Completed Tasks : *
+
+1)Add radio button on invoices/create page. [Done]
+=>https://www.screencast.com/t/tK4owNI4a 
+2)Expense record form copy to be under show [Done]
+=>https://www.screencast.com/t/8blQBtlHSs0V 
+=>https://www.screencast.com/t/CpZCqQyvuBs 
+3)Settings screen for user access to screens - Design only [Done]
+=>https://www.screencast.com/t/3yIYX3ZYIOB          [ user_role page ]
+=>https://www.screencast.com/t/fS3NL11D             [ For Team Leader Role ] 
+4)Team leader to sales person - requisition flow (requisition list) - Design only [Done]
+	Create new tab for Team leader where they can approve product requests which requested by sales person.
+    =>https://www.screencast.com/t/HfY5gzeL 
+    Create new Explore page for sales person and create new tab and Packing List 
+    =>https://www.screencast.com/t/AtzbCNBg1CFw
+5)Team leader to sales person - requisition flow (requisition list) - Design only [Done]
+    Create new tab for Team leader where they can approve product requests which requested by sales person. 
+    =>https://www.screencast.com/t/HfY5gzeL
+    =>https://www.screencast.com/t/ZmFnVCeyA2 
+6)Add Show # and Show Name in Expense Page .[Done]
+    =>https://www.screencast.com/t/LBygGqumDb 
+
+Please check with the latest updates and let us know your thoughts for the same.
+
+Thanks 
+
+==========================================================================================================================================================
+==========================================================================================================================================================
+==========================================================================================================================================================
+==========================================================================================================================================================
+
+15th May 2019
+
+1)Also, for this and the packing list of team leader and business owner, we need to see history of requests as a display table. Clicking on a row should open modal popup with details of that request
+
+Display All previous request in table view and display product details on pop up. 
+URL : http://localhost/bib/index.php/projects/productrequesthistory
+
+=> https://www.screencast.com/t/W4xBoAN8G76P
+=> https://www.screencast.com/t/QioJpimjh 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2)Transfer of stock between team leaders - Design only
+
+Create new tab where Team Leader Can Confirm Product Request Approved by Business Owner (Team Leader Side.)
+=> https://www.screencast.com/t/0CaShnA3uAt 
+Create new tab where Business Owner Can Approve Product Request which requested by Business owner. (Business Owner Side.)
+=> https://www.screencast.com/t/UEmIVwtx
+
+Add New Radio Option named Virtual-TL in add warehouse page.
+=> https://www.screencast.com/t/S8vIKxTTk1
+Add New Radio Option named Virtual-TL in edit warehouse page.
+=> https://www.screencast.com/t/h4hYh3PHhZ
+we will need to allow team leaders to transfer the stock to another team leader - They will have a screen, under the show, where they can select another team leader (from the list of team leaders assigned to a show), and they can transfer either the full stock they have in their Virtual - TL warehouse, or they can enter qty next to each item.
+=>https://www.screencast.com/t/f9JX0yKFjOj
+
+Please check below screen shots for this task Transfer of stock between team leaders.
+
+Create new tab where Team Leader Can Confirm Product Request Approved by Business Owner (Team Leader Side.)
+=> https://www.screencast.com/t/0CaShnA3uAt 
+Create new tab where Business Owner Can Approve Product Request which requested by Business owner. (Business Owner Side.)
+=> https://www.screencast.com/t/UEmIVwtx
+
+Add New Radio Option named Virtual-TL in add warehouse page.
+=> https://www.screencast.com/t/S8vIKxTTk1
+Add New Radio Option named Virtual-TL in edit warehouse page.
+=> https://www.screencast.com/t/h4hYh3PHhZ
+
+we will need to allow team leaders to transfer the stock to another team leader - They will have a screen, under the show, where they can select another team leader (from the list of team leaders assigned to a show), and they can transfer either the full stock they have in their Virtual - TL warehouse, or they can enter qty next to each item.
+=>https://www.screencast.com/t/f9JX0yKFjOj
+
+Please inform me if I going wrong in give any updates or changes in design.
+
+
+
+Ok sir I will Change as above you say.
+
+I have create Packing List Request for team leader where team leader can confirm the requested quantity after business owner approve the requested quantity.
+Just like Sales person confirm the product quantity after team leader approve it. 
+
+Create new tab for stock transfer on team leader show side
+where team leader can transfer full stock using button click named  Transfer full stock  or can transfer stock using enter quantity for each item.
+=> https://www.screencast.com/t/upiu1HbtlWw3
+
+Create new tab where team leader can see received stock which is transferred by selected team leader and confirm that stock using button Confirm All.
+=> https://www.screencast.com/t/HLKRzc4qO6
+
+
+Create new tab named Inventory 
+=> https://www.screencast.com/t/592go8gcUa
+
+
+Set Virtual - TL as disable in add warehouse page and edit warehouse page.
+=> https://www.screencast.com/t/DRsvFAeaD 
+=>
+  
+display only request details.  
+
+=>   https://www.screencast.com/t/O8ByskQRKG
+  
+=>   https://www.screencast.com/t/ewWf16i6q
+  
+  
+  Each request can be for any number of products. When the request is sent, if there are 10 products, 5 of them may be approved. 5 of them may not be approved. So, when each item in a request gets approved, there is a specific date and time. Which is different from requested date and time. Which is also different from received date and time. Received date and time is when the receiving person confirms receipt. Again, they can confirm receipt for 3 of the 5 approved items.
+
+So, inside a single request, there can be 10 products. 5 approved with full qty, 2 approved with partial qty. 3 not approved.
+
+The table of old requests should be 1 row per request. Not 1 row per product. Inside each request, there can be many products. So, the modal popup shows the status of each product inside that request, 1 row per product. But, the main table of requests, does not show any products.
+
+
+---------------------------------------------------------------
+
+
+This is for the display all requests and request details
+
+=>   https://www.screencast.com/t/O8ByskQRKG 
+=>   https://www.screencast.com/t/ewWf16i6q
+
+
+=> https://www.screencast.com/t/hmeaj48O
+This is Team Leader side sub tab named Sales Person Requisition List  inside Inventory tab. where Team leader can see all sales person requests and can approve number of Quantity requested by sales person and after that sales person  can confirm receipt for approved quantity.
+
+=> https://www.screencast.com/t/kmenQsMcPih4
+This is at Sales Person side where Sales person can see the requests and also confirm request which approved by team leader.
+And on history request page all users can see the previous request and click on particular request, they can see all information about that request.
+This page is managed user role wise. such as for team leader and business owner - team leader doesn't has approve confirm option and Business owner doesn't has confirm receipt option.  
+
+
+This pages display only view. at development time this pages are managed by user role wise.
+Updates for Task assign by 'Bamboo is Better' as on 16th May, 2019
+
+Hi,
+
+Following are the updates for Task assign by 'Bamboo is Better' as on 16th May, 2019 :
+
+List of Completed Tasks :
+
+    1) Changes In Request History Page 
+		Display Received Date and Time on table view. 
+		=>https://www.screencast.com/t/28yuN5AeZ1 
+		Display Received Date and Time on pop up. 
+		=>https://www.screencast.com/t/EAZ2Bf00qwkg [Done]
+    2)Add Notes in Store Project Side. [Done]
+    3)Add Notes in Show project Side [Done]
+    4)Add Comment and display Comment at Store Side. [Done]
+    5)Add Comment and display Comment at Show side. [Done]
+    6)Add Booth at Store Side. [Done]
+    7)Add Booth for Show Side. [Done]
+	
+Notes :
+
+     I will create separate tabs for confirm approved and for confirm receipt request list for all users (Team Leader, Sales Person and Business Owner).
+
+Please check with the latest updates and let us know your thoughts for the same.
+
+Thanks 
+
+=============
+===============
+=====================
+===============
+Updates for Task Assign by Benjamin 'Bamboo is Better' as on 17th May, 2019
+
+Hi,
+
+Following are the updates for Task Assign by Benjamin 'Bamboo is Better' as on 17th May, 2019 :
+
+List of Completed Tasks :
+    Changes in Inventory Tab on Team Leader Dashboard. [Done]
+    Changes in Inventory Tab on Sales Person Dashboard. [Done]
+    Create new tab named 'Team Leader - Requested Packing List' for Business Owner [Done]
+    Create Design for Inventory Report. [Done]
+	
+Please check with the latest updates and let us know your thoughts for the same.
+
+Thanks
+=========================
+================================
+=========================================
+Hi,
+
+Following are the updates for Task Assigned for 'Bamboo is Better' as on 20th May, 2019 :
+
+List of Completed Tasks : 
+
+    1.Add Booth details for show [Done]
+    2.Edit Booth details for show [Done]
+    3.Display Show Booth details [Done]
+    4.Display Show Tasks [Done]
+    5.Edit Task details for Show [Done]
+    6.Display Thread Details for Show [Done]
+
+Notes : 
+
+    I have pushed changes and new functionalities into the github.
+
+Please check with the latest updates and let us know your thoughts for the same.
+
+Thanks
+============================
+==================================
+============================================
+Hi,
+
+Following are the updates for 'Bamboo is Better' as on 21st May, 2019 :
+
+*List of Completed Tasks : * 
+
+  1. Delete Milestones for show [Done]
+  2. Delete Booth Details for show [Done]
+  3. Delete Tasks for Show [Done]
+  4. Change Task Status for Show [Done]
+  5. Manage Thread [Done]
+  6. Add,Display and Delete File for Show [Done]
+  
+*Notes : *
+ 
+  1. I have pushed today changes into Github.
+  
+Please check with the latest updates and let us know your thoughts for the same.
+
+
+*Notes : *
+
+ For Google map related API's there is showing message as "You have exceeded your daily request quota for this API. If you did not set a custom daily request quota, verify your project has an active billing account". So we need to fill up the billing details to access the API's. Google just take the billing details to access the API's as free. Right now for this reason shall we put static address field to store the address details ? Here I am giving the URL which helps to fill up the billing details.
+
+URL : https://console.cloud.google.com/freetrial/signup/tos
+
+=============================================================
+==================================================================
+=========================================================================
+QUERY :-
+https://www.screencast.com/t/0VCyU4IfO
+
+Under the team leader show explore page, In packing List tab, There is two part display for product list. one for product without color and one for product with color. but In Product add page there is by default one color from color picker will be selected.so there is no any product will be store without color details.  Could you please explain how to solve this ?
+-------------------------------------------------------------------------
+Hi,
+
+Following are the updates for 'Bamboo is Better' as on 22nd May, 2019 :
+
+*List of Completed Tasks : *
+
+    1. Apply for show by Team Leader. [Done]
+    2. Approve Team Leader for Show [Done]
+    3. Generate Unique Random ID for show id. [Done]
+    4. Display Task Details Dynamically on Show explore page. [Done]
+
+*Notes : *
+
+    1. I have pushed today changes into Github.
+	2. I have put latest database in named Databases folder.
+
+Please check with the latest updates and let us know your thoughts for the same.
+
+Thanks
+
+=============================================================
+==================================================================
+=========================================================================
+===============================================================================================================================================================
+Date 23rd May 2019
+
+Hi,
+
+Following are the updates for 'Bamboo is Better' as on 23rd May, 2019 :
+
+*List of Completed Tasks : *
+
+    1. Display Product details in packing list with color and without color on Team leader Dashboard. [Done]
+    2. Changes set break time page for insert break time with sales person. [Done]
+    3. Manage Tabs for Team Leader and Business owner for packing list Request and Approval. [Done]
+
+*Queries : *
+
+    1. On Business Owner Dashboard, In Attendees Tab, What details should I display ? 
+	=> https://www.screencast.com/t/O7FOlsJKr4s
+    2. On Team Leader Dashboard, In Packing List Tab, What details should I display in flax box checkout and which functionality will be perform on check box checked event ? 
+	=> https://www.screencast.com/t/ylXsElf4o
+    4. what is use of Attach a file in Expense statement page. need to store selected file in database with calculated expense details ? 
+	=> https://www.screencast.com/t/x3OApfnNsJvz 
+	
+*Notes : * 
+
+    1. I have pushed today changes into Github.
+  
+Please check with the latest updates and let us know your thoughts for the same.
+
+Thanks
+ 

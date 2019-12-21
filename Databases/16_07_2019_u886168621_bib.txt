@@ -1,0 +1,59 @@
+Database Changes As on 16th July 2019 :
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1) Table : teamleader_products
+
+   Changes : Add New Field with named show_id.
+
+	DROP TABLE IF EXISTS `teamleader_products`;
+	CREATE TABLE IF NOT EXISTS `teamleader_products` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `product_id` int(11) NOT NULL,
+	  `warehouse_id` int(11) NOT NULL,
+	  `teamleader_id` int(11) NOT NULL,
+	  `total_qty` int(11) NOT NULL,
+	  `status` int(11) NOT NULL DEFAULT '0',
+	  `show_id` int(11) NOT NULL,
+	  PRIMARY KEY (`id`)
+	)
+
+2) Table : salesperson_product
+
+   Changes : Create New table with named : salesperson_product
+   
+	DROP TABLE IF EXISTS `salesperson_product`;
+	CREATE TABLE IF NOT EXISTS `salesperson_product` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `product_id` int(11) NOT NULL,
+	  `product_qty` int(11) NOT NULL,
+	  `salesperson_id` int(11) NOT NULL,
+	  `show_id` int(11) NOT NULL,
+	  `status` int(11) NOT NULL DEFAULT '0',
+	  PRIMARY KEY (`id`)
+	)  
+	
+3) Table : tl_to_sl_product_request
+
+   Changes : Create new Table with named tl_to_sl_product_request
+   
+	DROP TABLE IF EXISTS `tl_to_sl_product_request`;
+	CREATE TABLE IF NOT EXISTS `tl_to_sl_product_request` (
+	  `id` int(11) NOT NULL AUTO_INCREMENT,
+	  `product_id` int(11) NOT NULL,
+	  `product_request_qty` int(11) NOT NULL,
+	  `requested_teamleader_by` int(11) NOT NULL,
+	  `requested_salesperson_to` int(11) NOT NULL,
+	  `show_id` int(11) NOT NULL,
+	  `requested_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	  `confirmed_at` timestamp NULL DEFAULT NULL,
+	  `status` int(11) NOT NULL DEFAULT '0' COMMENT '0: for team leader request, 1: for sales person confirmed',
+	  PRIMARY KEY (`id`)
+	) 
+
+	
+	
+   
+   
+   
+
+

@@ -1,0 +1,29 @@
+concept of glocals.
+
+1) anybody can bid but here 
+
+1) employee 
+2) company/
+3) adminstrator
+
+employee
+----------
+1) contact details
+2) Awards etc
+based on skill/history of work rate the employee
+categorie to the employee
+
+company
+-------------------
+1) public project/ invite freelancer
+invite freelancer -> search on skill
+
+2 case
+----
+1- person and 5 person(create a bubble and than bid on project)
+
+Reviews
+==========================
+
+feeds
+=============================
