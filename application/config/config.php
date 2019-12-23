@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 // $config['base_url'] = 'http://192.168.43.94/bib/';
 //$config['base_url'] = 'http://192.168.2.114/bib/';
 // $config['base_url'] = 'http://localhost/bib/';
- $config['base_url'] = 'http://192.168.2.109/bib/';
+ $config['base_url'] = 'https://erp-bib.herokuapp.com/';
 // $config['base_url'] = 'https://08afbba4.ngrok.io/bib/';
 
 
