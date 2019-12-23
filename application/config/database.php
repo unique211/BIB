@@ -15,13 +15,13 @@ $query_builder = TRUE;
 // $password ='Reset123!';
 
 // $database ='u886168621_bib';	
-$hostname ='localhost';
+$hostname ='us-cdbr-iron-east-05.cleardb.net';
 
-$username ='root';
+$username ='b19c9562f71218';
 
-$password ='';
+$password ='3e4bd718';
 
-$database ='logixbui_golimo';	
+$database ='heroku_9780d637cc01dce';	
 // $hostname ='166.62.28.109';
 
 // $username ='i3175962_ally';
