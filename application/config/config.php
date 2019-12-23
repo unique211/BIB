@@ -752,7 +752,7 @@ $config['sess_cookie_name'] = 'ci_sessions';
 
 $config['sess_expiration'] = 7200;
 
-$config['sess_save_path'] = 'ci_sessions';
+$config['sess_save_path'] = sys_get_temp_dir();
 
 $config['sess_match_ip'] = FALSE;
 
