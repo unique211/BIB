@@ -399,6 +399,8 @@ class Projects extends CI_Controller
                 }
             } elseif ($this->aauth->get_user()->roleid == 5) {
                 $row[] = '<a href="' . base_url() . 'projects/exploreshow?id=' . $show->id . '" class="btn btn-primary btn-sm rounded" data-id="' . $show->id . '" data-stat="0"> <i class="icon-eye"></i>  </a> <a class="btn btn-info btn-sm" href="' . base_url() . 'projects/editshow?id=' . $show->id . '" data-object-id="' . $show->id . '"> <i class="icon-pencil"></i> </a>&nbsp;<a class="btn btn-brown btn-sm delete-custom" data-did="15" href="#" data-object-id="' . $show->id . '"> <i class="icon-trash-o"></i> </a>';
+            }elseif($this->aauth->get_user()->roleid == 2){
+                $row[] = '<a href="' . base_url() . 'projects/exploreshow?id=' . $show->id . '" class="btn btn-primary btn-sm rounded" data-id="' . $show->id . '" data-stat="0"> <i class="icon-eye"></i>  </a>';  
             }
             $data[] = $row;
         }
@@ -1089,7 +1091,41 @@ class Projects extends CI_Controller
     //Display Show Lists
     public function shows()
     {
+       
         $this->session->set_userdata('favourite_website', $this->aauth->get_user()->roleid);
+
+      
+            // if($this->aauth->get_user()->roleid ==2){
+            //     // $id=$this->input->get('id');
+            //     // if( !=)
+            //     // {
+            //     //       exit('<h3>Sorry! You have insufficient permissions to access this section</h3>');
+            //     // }
+            //     $id= $this->session->userdata('salesperson_show_id');
+              
+            //     $data['items'] = $this->products->getItemList();
+            //     $data['getProductBynotColor']=$this->shows->getProductBynotColorsl($id);
+        
+            //     $data['getProductByColor']=$this->shows->getProductByColorsl($id);
+        
+            //     $data['teamleader'] = $this->shows->teamleaderlistforproductrequestsl($id);
+        
+            //     $data['project'] = $this->shows->details($id);
+        
+            //     $head['usernm'] = $this->aauth->get_user()->username;
+        
+            //     $head['title'] = 'Sales Person Dashboard';
+        
+            //     $this->load->view('fixed/header', $head);
+        
+            //     $this->load->view('SalesPerson/explore',$data);
+        
+            //     $this->load->view('fixed/footer');
+            // }else{
+
+            
+        
+
         $head['usernm'] = $this->aauth->get_user()->username;
         $head['title'] = 'Shows List';
         // $data['totalt'] = $this->projects->project_count_all();
@@ -1102,6 +1138,8 @@ class Projects extends CI_Controller
         $this->load->view('fixed/header', $head);
         $this->load->view('projects/shows', $data);
         $this->load->view('fixed/footer');
+   // }
+    
     }
     // public function showsdemo()
     // {
@@ -1220,8 +1258,36 @@ class Projects extends CI_Controller
 
 
         if ($this->aauth->get_user()->roleid == 2) {
-            exit('<h3>Sorry! You have insufficient permissions to access this section</h3>');
-        }
+
+            $id=$this->input->get('id');
+            if($this->session->userdata('salesperson_show_id') != $id)
+            {
+                  exit('<h3>Sorry! You have insufficient permissions to access this section</h3>');
+            }
+           
+          
+            $data['items'] = $this->products->getItemList();
+            $data['getProductBynotColor']=$this->shows->getProductBynotColorsl($id);
+    
+            $data['getProductByColor']=$this->shows->getProductByColorsl($id);
+    
+            $data['teamleader'] = $this->shows->teamleaderlistforproductrequestsl($id);
+    
+            $data['project'] = $this->shows->details($id);
+
+            $data['location_details'] = $this->shows->getLocationDetails($id);
+    
+            $head['usernm'] = $this->aauth->get_user()->username;
+    
+            $head['title'] = 'Sales Person Dashboard';
+    
+            $this->load->view('fixed/header', $head);
+    
+            $this->load->view('SalesPerson/explore',$data);
+    
+            $this->load->view('fixed/footer');
+            //exit('<h3>Sorry! You have insufficient permissions to access this section</h3>');
+        }else{
 
 
         $id = $this->input->get('id');
@@ -1271,6 +1337,7 @@ class Projects extends CI_Controller
         $this->load->view('fixed/header', $head);
         $this->load->view('projects/exploreshow', $data);
         $this->load->view('fixed/footer');
+        }
     }
 
     //get stocktransfer recieve data

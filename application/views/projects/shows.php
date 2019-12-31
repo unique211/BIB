@@ -252,7 +252,7 @@
 
             <?php }
 
-            if($this->aauth->get_user()->roleid==3) { ?>
+            if($this->aauth->get_user()->roleid==3  || $this->aauth->get_user()->roleid==2) { ?>
 
                 <table id="showtable" class="display" cellspacing="0" width="100%">
 

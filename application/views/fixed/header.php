@@ -962,24 +962,27 @@
                                 class="fa arrow"></i> </a>
 
                     <ul class="menu-content sidebar-green-backgrod">
-
+                    <?php if ($this->aauth->get_user()->roleid != 2) { ?>
                         <li class="sidebar-green-backgrod">
 
                             <a href="<?php echo base_url(); ?>projects/showproject"><?php echo $this->lang->line('New Project') ?></a>
 
                         </li>
+                    <?php } ?>
 
                         <li class="sidebar-green-backgrod">
 
                             <a href="<?php echo base_url(); ?>projects/shows"><?php echo $this->lang->line('Manage Projects') ?></a>
 
                         </li>
-
+                        <?php if ($this->aauth->get_user()->roleid != 2) { ?>
                         <li class="sidebar-green-backgrod">
 
                             <a href="<?php echo base_url(); ?>projects/addstore"><?php echo $this->lang->line('New Store') ?></a>
 
                         </li>
+
+                        <?php } ?>
 
                         <li class="sidebar-green-backgrod">
 
@@ -989,6 +992,28 @@
 
                     </ul>
 
+                </li>
+                <li class="nav-item has-sub sidebar-green-backgrod <?php if ($this->uri->segment(1) == "products") {
+
+echo ' open';
+
+} ?>">
+
+<a href=""> <i class="icon-truck2"></i><span
+
+            class="menu-title"><?php echo $this->lang->line('Items Manager') ?></span><i
+
+            class="fa arrow"></i> </a>
+
+<ul class="menu-content sidebar-green-backgrod">
+
+
+    <li class="sidebar-green-backgrod">
+
+        <a href="<?php echo base_url(); ?>products"><?php echo $this->lang->line('Manage Products') ?></a>
+
+    </li>
+    </ul>
                 </li>
 
                 <li class="sidebar-green-backgrod" ><a href="<?php echo base_url(); ?>tools/todo"><i class="icon-android-done-all "></i><span

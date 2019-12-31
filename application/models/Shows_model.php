@@ -138,7 +138,13 @@ class Shows_model extends CI_Model
 
         $this->db->from('shows');
 
+        
+        if($this->aauth->get_user()->roleid==2){
+            $this->db->where('id',$this->session->userdata('salesperson_show_id'));
+        }
+
         $this->db->order_by('id', 'DESC');
+
 
         $query = $this->db->get();
 
