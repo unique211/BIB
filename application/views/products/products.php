@@ -112,6 +112,9 @@
                         <td>$code</td>
                         <td>$cat</td>
                         <td>$price</td>";
+                        if ($this->aauth->get_user()->roleid == 2) { 
+                            echo  "<td>-</td></tr>";
+                        }else{
                         if($status==1){
                             echo   "<td><a href='" . base_url("products/edit?id=$id") . "' class='btn btn-warning btn-xs' title='Edit'><i class='icon-pencil'></i></a>&nbsp;" . $del . "<label class='checkbox-inline' style='margin-left:30px;'><input type='checkbox'  id='status_$id' checked data-toggle='toggle'  data-size='mini' class='itemactdeact'   data-on='Active' data-off='Inactive'  data-onstyle='success' data-offstyle='danger'></label></td>
                             </tr>";
@@ -119,6 +122,7 @@
                             echo   "<td><a href='" . base_url("products/edit?id=$id") . "' class='btn btn-warning btn-xs' title='Edit'><i class='icon-pencil'></i></a>&nbsp;" . $del . "<label class='checkbox-inline' style='margin-left:30px;'><input type='checkbox'  id='status_$id'  data-toggle='toggle'  data-size='mini' class='itemactdeact'   data-on='Active' data-off='Inactive'  data-onstyle='success' data-offstyle='danger'></label></td>
                             </tr>"; 
                         }
+                    }
 
                       
                     $i++;

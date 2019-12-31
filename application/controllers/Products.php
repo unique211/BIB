@@ -62,12 +62,12 @@ class Products extends CI_Controller
             redirect('/user/', 'refresh');
         }
 
-        if ($this->aauth->get_user()->roleid != 1 and $this->aauth->get_user()->roleid < 3) {
+        // if ($this->aauth->get_user()->roleid != 1 and $this->aauth->get_user()->roleid < 3) {
 
 
 
-            exit('<h3>Sorry! You have insufficient permissions to access this section</h3>');
-        }
+        //     exit('<h3>Sorry! You have insufficient permissions to access this section</h3>');
+        // }
     }
 
 

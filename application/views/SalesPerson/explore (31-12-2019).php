@@ -124,13 +124,13 @@ foreach ($items as $item) {
                                             <a class="nav-link" id="location-tab" data-toggle="tab" href="#location" aria-controls="location"><?php echo $this->lang->line('Location') ?></a>
 
                                         </li>
-                                        <!-- <li class="nav-item">
+                                        <li class="nav-item">
 
                                             <a class="nav-link" id="booths-tab" data-toggle="tab" href="#booths" aria-controls="booths"><?php echo $this->lang->line('Booth') ?></a>
 
-                                        </li> -->
+                                        </li>
 
-                                        <?php if ($this->aauth->get_user()->roleid == 5 || $this->aauth->get_user()->roleid == 2) { ?>
+                                        <?php if ($this->aauth->get_user()->roleid == 5) { ?>
 
                                             <li class="nav-item">
 
@@ -453,9 +453,11 @@ foreach ($items as $item) {
                                         </table>
 
                                     </div>
-                                     <!-- Location -->
+                                    </div>
 
-                                     <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location-tab" aria-expanded="false">
+ <!-- Location -->
+
+ <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location-tab" aria-expanded="false">
 
 
 <div class="card card-block">
@@ -642,9 +644,7 @@ foreach ($items as $item) {
 
                             <input type="button" class="btn btn-success sub-btn" value="<?php echo $this->lang->line('Add') ?> " id="submit-data123" data-loading-text="Creating...">
 
-
                         </div>
-                        
 
                     </div>
 
@@ -667,8 +667,6 @@ foreach ($items as $item) {
 </div>
 
 <!-- Location -->
-                                    </div>
-
 
 
                                 </div>

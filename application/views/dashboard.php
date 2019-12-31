@@ -1,4 +1,5 @@
 <script type="text/javascript">
+
     var dataVisits = [
         <?php $tt_inc = 0;foreach ($incomechart as $row) {
         $tt_inc += $row['total'];
@@ -561,6 +562,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
 <script type="text/javascript">
+
 $.ajax({
 
 type  : 'POST',

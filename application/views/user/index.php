@@ -77,9 +77,9 @@
                         <div class="card-footer">
                             <div class="col-md-12 col-xs-12 text-xs-center">
 
-                                <h6 class="card-subtitle text-muted text-xs-center font-small-3 pt-2"><a
+                                <!-- <h6 class="card-subtitle text-muted text-xs-center font-small-3 pt-2"><a
                                             href="<?php echo base_url('crm'); ?>"
-                                            class="card-link"><?php echo $this->lang->line('customer_login') ?></a></h6>
+                                            class="card-link"><?php echo $this->lang->line('customer_login') ?></a></h6> -->
                             </div>
                         </div>
                     </div>
