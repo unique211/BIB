@@ -642,7 +642,9 @@ foreach ($items as $item) {
 
                             <input type="button" class="btn btn-success sub-btn" value="<?php echo $this->lang->line('Add') ?> " id="submit-data123" data-loading-text="Creating...">
 
+
                         </div>
+                        
 
                     </div>
 
