@@ -645,6 +645,7 @@
 </div>
 
 <script type="text/javascript">
+
     $(function() {
         $('.summernote').summernote({
             height: 150,

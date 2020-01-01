@@ -53,6 +53,29 @@ class Projects extends CI_Controller
     }
     public function explore()
     {
+       //change by sagar -for salesperson--01-01-2020--strat
+       if($this->aauth->get_user()->roleid ==2){//change by sagar for salesperson --01-01-2020
+        $id = $this->input->get('id');
+        $head['usernm'] = $this->aauth->get_user()->username;
+        $head['title'] = 'Store Overview';
+        $data['totalt'] = $this->projects->task_count_all($id);
+        $explore = $this->projects->explore($id);
+        $data['thread_list'] = $this->projects->task_thread($id);
+        $data['milestones'] = $this->projects->milestones_list($id);
+        $data['activities'] = $this->projects->activities($id);
+        $data['p_files'] = $this->projects->p_files($id);
+        $data['comments_list'] = $this->projects->comments_thread($id);
+        $data['emp'] = $this->projects->list_project_employee($id);
+        $data['project'] = $explore['project'];
+        $data['invoices'] = $explore['invoices'];
+        $this->load->view('fixed/header', $head);
+        $this->load->view('projects/explore1', $data);
+        $this->load->view('fixed/footer');
+
+        //change by sagar -for salesperson--01-01-2020--End
+
+       }else{
+       
         $id = $this->input->get('id');
         $head['usernm'] = $this->aauth->get_user()->username;
         $head['title'] = 'Store Overview';
@@ -69,6 +92,7 @@ class Projects extends CI_Controller
         $this->load->view('fixed/header', $head);
         $this->load->view('projects/explore', $data);
         $this->load->view('fixed/footer');
+       }
     }
     public function addstore()
     {
@@ -349,6 +373,8 @@ class Projects extends CI_Controller
                 $row[] = '<a href="' . base_url() . 'projects/explore?id=' . $project->id . '" class="btn btn-primary btn-sm rounded" data-id="' . $project->id . '" data-stat="0"> ' . $this->lang->line('View') . '</a> <a href="' . base_url() . 'projects/explore?id=' . $project->id . '" class="btn btn-success btn-sm rounded apply" data-id="' . $project->id . '" data-stat="0"> ' . $this->lang->line('Apply') . '</a>';
             } elseif ($this->aauth->get_user()->roleid == 5) {
                 $row[] = '<a href="' . base_url() . 'projects/explore?id=' . $project->id . '" class="btn btn-primary btn-sm rounded" data-id="' . $project->id . '" data-stat="0"> <i class="icon-eye"></i> </a> <a class="btn btn-info btn-sm" href="' . base_url() . 'projects/edit?id=' . $project->id . '" data-object-id="' . $project->id . '"> <i class="icon-pencil"></i> </a>&nbsp;<a class="btn-brown btn-sm delete-custom" data-did="3" href="#"  data-object-id="' . $project->id . '"> <i class="icon-trash-o"></i> </a>';
+            }elseif ($this->aauth->get_user()->roleid == 2) {// change by sagar--1-1-2020 for salesperson
+                $row[] =  '<a href="' . base_url() . 'projects/explore?id=' . $project->id . '" class="btn btn-primary btn-sm rounded" data-id="' . $project->id . '" data-stat="0"> <i class="icon-eye"></i> </a>';
             }
             $data[] = $row;
         }
@@ -566,6 +592,8 @@ class Projects extends CI_Controller
             $row[] = $tl;
             if ($this->aauth->get_user()->roleid == 5) {
                 $row[] = '<a class="btn btn-info btn-sm" href="' . base_url() . 'projects/editbooth?id=' . $booth['boothid'] . '" data-object-id="' . $booth['boothid'] . '"> <i class="icon-pencil"></i> </a>&nbsp;<a class="btn btn-brown btn-sm delete-custom" data-object-id="' . $booth['boothid'] . '" data-did="6"> <i class="icon-trash-o"></i> </a>';
+            }else if($this->aauth->get_user()->roleid == 2){
+                $row[] ="-";
             } else {
                 $row[] = '<a class="btn btn-info btn-sm" href="' . base_url() . 'projects/editbooth?id=' . $booth['boothid'] . '" data-object-id="' . $booth['boothid'] . '"> <i class="icon-pencil"></i> </a>';
             }

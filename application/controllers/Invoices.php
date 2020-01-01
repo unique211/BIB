@@ -598,8 +598,11 @@ class Invoices extends CI_Controller
 
             $row[] = '<span class="st-' . $invoices->status . '">' . $this->lang->line(ucwords($invoices->status)) . '</span>';
 
+            if ($this->aauth->get_user()->roleid == 2) {//change by sagar--01-01-2020
+                $row[] = '<a href="' . base_url("invoices/view?id=$invoices->tid") . '" class="btn btn-success btn-xs"><i class="icon-file-text"></i> ' . $this->lang->line('View') . '</a> &nbsp;';
+            }else{
             $row[] = '<a href="' . base_url("invoices/view?id=$invoices->tid") . '" class="btn btn-success btn-xs"><i class="icon-file-text"></i> ' . $this->lang->line('View') . '</a> &nbsp; <a href="' . base_url("invoices/printinvoice?id=$invoices->tid") . '&d=1" class="btn btn-info btn-xs"  title="Download"><span class="icon-download"></span></a>&nbsp; &nbsp;<a href="#" data-object-id="' . $invoices->tid . '" class="btn btn-danger btn-xs delete-object"><span class="icon-trash"></span></a>';
-
+            }
 
 
             $data[] = $row;
@@ -686,7 +689,7 @@ class Invoices extends CI_Controller
 
         $tid = intval($this->input->get('id'));
 
-
+        echo "d".$this->input->get('d')."id".$tid;
 
         $data['id'] = $tid;
 
@@ -696,9 +699,9 @@ class Invoices extends CI_Controller
 
         if ($data['invoice']) $data['products'] = $this->invocies->invoice_products($tid);
 
-        if ($data['invoice']) $data['employee'] = $this->invocies->employee($data['invoice']['eid']);
+       if ($data['invoice']) $data['employee'] = $this->invocies->employee($data['invoice']['eid']);
 
-
+       
 
         ini_set('memory_limit', '64M');
 
@@ -709,33 +712,37 @@ class Invoices extends CI_Controller
         $html2 = $this->load->view('invoices/header-print-'.LTR, $data, true);
 
 
+       
 
         //PDF Rendering
 
         $this->load->library('pdf_invoice');
 
-
+        
 
         $pdf = $this->pdf_invoice->load();
 
+        echo $html2."".$html;
+
         $pdf->SetHTMLHeader($html2);
+
+      
 
         $pdf->SetHTMLFooter('<div style="text-align: right;font-family: serif; font-size: 8pt; color: #5C5C5C; font-style: italic;margin-top:0pt;">{PAGENO}/{nbpg} #'.$tid.'</div>');
 
-
+       
 
         $pdf->WriteHTML($html);
 
-
-
+       
+     
         if ($this->input->get('d')) {
-
-
-
+        
+            
             $pdf->Output('Invoice_#' . $tid . '.pdf', 'D');
 
         } else {
-
+           
             $pdf->Output('Invoice_#' . $tid . '.pdf', 'I');
 
         }
