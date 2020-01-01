@@ -200,7 +200,7 @@
 
 
 
-            <?php if($this->aauth->get_user()->roleid==5) { ?>
+            <?php if($this->aauth->get_user()->roleid==5 || $this->aauth->get_user()->roleid==2) { ?>
 
 
 

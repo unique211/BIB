@@ -60,6 +60,7 @@
     </div>
 </div>
 <script type="text/javascript">
+
     $(document).ready(function () {
 
         var table = $('#invoices').DataTable({

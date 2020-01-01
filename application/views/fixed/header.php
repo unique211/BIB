@@ -993,6 +993,7 @@
                     </ul>
 
                 </li>
+                <?php if($this->aauth->get_user()->roleid ==2){ ?>
                 <li class="nav-item has-sub sidebar-green-backgrod <?php if ($this->uri->segment(1) == "products") {
 
 echo ' open';
@@ -1015,6 +1016,37 @@ echo ' open';
     </li>
     </ul>
                 </li>
+
+                <li class="nav-item has-sub sidebar-green-backgrod <?php if ($this->uri->segment(1) == "purchase") {
+
+echo ' open';
+
+} ?>">
+
+<a href=""> <i class="icon-file"></i><span
+
+            class="menu-title"> <?php echo $this->lang->line('Purchase Order') ?> </span><i
+
+            class="fa arrow"></i> </a>
+
+<ul class="menu-content sidebar-green-backgrod">
+
+    <!-- <li class="sidebar-green-backgrod">
+
+        <a href="<?php echo base_url(); ?>purchase/create"><?php echo $this->lang->line('New Order') ?></a>
+
+    </li> -->
+
+    <li class="sidebar-green-backgrod">
+
+        <a href="<?php echo base_url(); ?>purchase"><?php echo $this->lang->line('Manage Orders') ?></a>
+
+    </li>
+
+</ul>
+
+</li>
+<?php  } ?>
 
                 <li class="sidebar-green-backgrod" ><a href="<?php echo base_url(); ?>tools/todo"><i class="icon-android-done-all "></i><span
 

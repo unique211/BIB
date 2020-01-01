@@ -109,572 +109,633 @@ foreach ($items as $item) {
                             <div class="tab-content px-1 pt-1">
 
 
-                                <div role="tabpanel" class="tab-pane fade active in" id="active" aria-labelledby="active-tab" aria-expanded="true">
+                                <div role="tabpanel" class="tab-pane fade active in" id="active1" aria-labelledby="active1-tab" aria-expanded="true">
 
-                                    <ul class="nav nav-tabs nav-justified sidebar-green-backgrod">
+                                    <div class="card">
 
-                                        <li class="nav-item">
+                                        <div class="card-body">
 
-                                            <a class="nav-link active " id="active-tab" data-toggle="tab" href="#active" aria-controls="active" aria-expanded="true">Information</a>
+                                            <div class="card-block">
 
-                                        </li>
+                                                <ul class="nav nav-tabs nav-justified sidebar-green-backgrod">
 
-                                        <li class="nav-item">
+                                                    <li class="nav-item">
 
-                                            <a class="nav-link" id="location-tab" data-toggle="tab" href="#location" aria-controls="location"><?php echo $this->lang->line('Location') ?></a>
+                                                        <a class="nav-link active " id="active-tab" data-toggle="tab" href="#active" aria-controls="active" aria-expanded="true">Information</a>
 
-                                        </li>
-                                        <!-- <li class="nav-item">
+                                                    </li>
+
+                                                    <li class="nav-item">
+
+                                                        <a class="nav-link" id="location-tab" data-toggle="tab" href="#location" aria-controls="location"><?php echo $this->lang->line('Location') ?></a>
+
+                                                    </li>
+                                                    <!-- <li class="nav-item">
 
                                             <a class="nav-link" id="booths-tab" data-toggle="tab" href="#booths" aria-controls="booths"><?php echo $this->lang->line('Booth') ?></a>
 
                                         </li> -->
 
-                                        <?php if ($this->aauth->get_user()->roleid == 5 || $this->aauth->get_user()->roleid == 2) { ?>
+                                                    <?php if ($this->aauth->get_user()->roleid == 5 || $this->aauth->get_user()->roleid == 2) { ?>
 
-                                            <li class="nav-item">
+                                                        <li class="nav-item">
 
-                                                <a class="nav-link" id="booths-tab" data-toggle="tab" href="#booths" aria-controls="booths"><?php echo $this->lang->line('Booth') ?></a>
+                                                            <a class="nav-link" id="booths-tab" data-toggle="tab" href="#booths" aria-controls="booths"><?php echo $this->lang->line('Booth') ?></a>
 
-                                            </li>
+                                                        </li>
 
-                                        <?php } ?>
+                                                    <?php } ?>
 
-                                        <?php if (($this->aauth->get_user()->roleid == 3 and !empty($tlckeck)) or ($this->aauth->get_user()->roleid == 5)) { ?>
-                                            <li class="nav-item">
+                                                    <?php if (($this->aauth->get_user()->roleid == 3 and !empty($tlckeck)) or ($this->aauth->get_user()->roleid == 5)) { ?>
+                                                        <li class="nav-item">
 
-                                                <a class="nav-link" id="salesperson1-tab" data-toggle="tab" href="#salesperson1" aria-controls="salesperson1"><?php echo $this->lang->line('Break timings') ?></a>
+                                                            <a class="nav-link" id="salesperson1-tab" data-toggle="tab" href="#salesperson1" aria-controls="salesperson1"><?php echo $this->lang->line('Break timings') ?></a>
 
-                                            </li>
+                                                        </li>
 
 
-                                            <li class="nav-item">
+                                                        <li class="nav-item">
 
-                                                <a class="nav-link" id="thread-tab" data-toggle="tab" href="#activities" aria-controls="activities"><?php echo $this->lang->line('Activities Log') ?></a>
+                                                            <a class="nav-link" id="thread-tab" data-toggle="tab" href="#activities" aria-controls="activities"><?php echo $this->lang->line('Activities Log') ?></a>
 
-                                            </li>
+                                                        </li>
 
-                                        <?php } ?>
+                                                    <?php } ?>
 
 
-                                    </ul>
-                                    <div role="tabpanel" class="tab-pane fade active in " id="active" aria-labelledby="active-tab" aria-expanded="true">
-                                    <div class="table-responsive col-sm-12">
+                                                </ul>
+                                                <div style="background-color: #f5f5f5" class="tab-content px-1 pt-1">
+                                                    <div role="tabpanel" class="tab-pane fade active in " id="active" aria-labelledby="active-tab" aria-expanded="true">
+                                                        <!-- <div class="table-responsive col-sm-12"> -->
 
-                                        <table class="table">
+                                                        <table class="table">
 
-                                            <tbody>
+                                                            <tbody>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Name') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Name') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_name'] ?></p>
+                                                                        <p><?php echo $project['show_name'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
 
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Status') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Status') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $this->lang->line($project['show_status']) ?></p>
+                                                                        <p><?php echo $this->lang->line($project['show_status']) ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Attendece') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Attendece') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_attendence'] ?></p>
+                                                                        <p><?php echo $project['show_attendence'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Budget') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Budget') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_budget'] ?></p>
+                                                                        <p><?php echo $project['show_budget'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Quota') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Quota') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_quota'] ?></p>
+                                                                        <p><?php echo $project['show_quota'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
 
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Start Date') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Start Date') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo dateformat($project['show_start_date']) ?></p>
+                                                                        <p><?php echo dateformat($project['show_start_date']) ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('End Date') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('End Date') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo dateformat($project['show_end_date']) ?></p>
+                                                                        <p><?php echo dateformat($project['show_end_date']) ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Setup Date') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Setup Date') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo dateformat($project['show_setup_date']) ?></p>
+                                                                        <p><?php echo dateformat($project['show_setup_date']) ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Hourly rate') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Hourly rate') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_hourly_wage'] ?></p>
+                                                                        <p><?php echo $project['show_hourly_wage'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Note') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Note') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_note'] ?></p>
+                                                                        <p><?php echo $project['show_note'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('TL Commision') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('TL Commision') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_tl_commission'] ?></p>
+                                                                        <p><?php echo $project['show_tl_commission'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
 
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Tags') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Tags') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php echo $project['show_tag'] ?></p>
+                                                                        <p><?php echo $project['show_tag'] ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
 
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Default Warehouse') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Default Warehouse') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p>Main Warehouse</p>
+                                                                        <p>Main Warehouse</p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
 
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row"><?php echo $this->lang->line('Shipping Option') ?></th>
+                                                                    <th scope="row"><?php echo $this->lang->line('Shipping Option') ?></th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php
+                                                                        <p><?php
 
-                                                            echo $project['show_shipping_option'];
+                                                                            echo $project['show_shipping_option'];
 
-                                                            ?></p>
+                                                                            ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
 
 
-                                                <tr>
+                                                                <tr>
 
-                                                    <th scope="row">Communication</th>
+                                                                    <th scope="row">Communication</th>
 
-                                                    <td>
+                                                                    <td>
 
-                                                        <p><?php switch ($project['ptype']) {
+                                                                        <p><?php switch ($project['ptype']) {
 
-                                                                case 0:
+                                                                                case 0:
 
-                                                                    echo 'None';
+                                                                                    echo 'None';
 
-                                                                    break;
+                                                                                    break;
 
-                                                                case 1:
+                                                                                case 1:
 
-                                                                    echo 'Emails to team';
+                                                                                    echo 'Emails to team';
 
-                                                                    break;
+                                                                                    break;
 
 
 
-                                                                case 2:
+                                                                                case 2:
 
-                                                                    echo 'Emails to team &  customer';
+                                                                                    echo 'Emails to team &  customer';
 
-                                                                    break;
-                                                            }
+                                                                                    break;
+                                                                            }
 
 
 
-                                                            ?></p>
+                                                                            ?></p>
 
 
 
-                                                    </td>
+                                                                    </td>
 
 
 
-                                                </tr>
+                                                                </tr>
 
 
 
-                                            </tbody>
+                                                            </tbody>
 
-                                        </table>
+                                                        </table>
+
+                                                        <!-- </div> -->
+                                                    </div>
+                                                    <!-- Location -->
+
+                                                    <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location-tab" aria-expanded="false">
+
+
+                                                        <div class="card card-block">
+
+
+
+                                                            <div class="grid_3 grid_4">
+
+
+
+
+
+                                                                <form method="post" id="data_form" class="form-horizontal <?php if ($this->aauth->get_user()->roleid == 3) {
+                                                                                                                                echo 'disablefield';
+                                                                                                                            } ?>">
+
+
+
+                                                                    <h5><?php echo $this->lang->line('Location') ?> Info</h5>
+
+                                                                    <hr>
+
+                                                                    <div class="form-group row">
+
+                                                                        <label class="col-sm-2 col-form-label" for="contact_person"><b>Contact Person </b><i style="color:red">*</i></label>
+
+                                                                        <div class="col-sm-6">
+
+                                                                            <input type="text" placeholder="Contact Person" class="form-control " name="contact_person" value="<?php echo $location_details[0]['contact_person']; ?>" />
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group row">
+
+                                                                        <label class="col-sm-2 col-form-label" for="contact_number"><b>Contact Number </b><i style="color:red">*</i></label>
+
+                                                                        <div class="col-sm-6">
+
+                                                                            <input type="text" placeholder="Contact Number" class="form-control " name="contact_number" value="<?php echo $location_details[0]['contact_number']; ?>" />
+
+
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group row">
+
+                                                                        <label class="col-sm-2 col-form-label" for="extension"><b>Extension (if any)</b></label>
+
+                                                                        <div class="col-sm-6">
+
+                                                                            <input type="text" placeholder="Extension" class="form-control" name="extension" value="<?php echo $location_details[0]['extension']; ?>" />
+
+                                                                        </div>
+
+                                                                    </div>
+
+
+
+                                                                    <div class="form-group row">
+
+
+
+                                                                        <label class="col-sm-2 col-form-label" for="indoor_outdoor"><b><?php echo $this->lang->line('Indoor') ?>/<?php echo $this->lang->line('Outdoor') ?><i style="color:red">*</i></b></label>
+
+                                                                        <div class="col-sm-4">
+
+                                                                            <select name="indoor_outdoor" class="form-control ">
+
+
+
+                                                                                <option value="1" <?php if ($location_details[0]['type'] == 1) echo 'selected'; ?>>Indoor</option>
+
+                                                                                <option value="2" <?php if ($location_details[0]['type'] == 2) echo 'selected'; ?>>Outdoor</option>
+
+
+
+
+
+                                                                            </select>
+
+                                                                        </div>
+
+
+
+
+
+                                                                    </div>
+
+
+
+
+
+                                                                    <div class="form-group row">
+
+                                                                        <label class="col-sm-2 col-form-label" for="address"><b><?php echo $this->lang->line('Address') ?><i style="color:red">*</i></b></label>
+
+                                                                        <div class="col-sm-6">
+
+                                                                            <textarea placeholder="Address" class="form-control " name="address"><?php echo $location_details[0]['address']; ?></textarea>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label class="col-sm-2 col-form-label" for="Flooring"><b>Flooring</b></label>
+                                                                        <div class="col-sm-6">
+                                                                            <input type="radio" name="required" value="Required" <?php if ($location_details[0]['flooring'] == 'Required') echo 'checked'; ?>> Required &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                            <input type="radio" name="required" value="Not Required" <?php if ($location_details[0]['flooring'] == 'Not Required') echo 'checked'; ?>> Not Required<br>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+                                                                        <label class="col-sm-2 col-form-label" for="Electricity"><b>Electricity</b></label>
+                                                                        <div class="col-sm-6">
+                                                                            <input type="radio" name="electricity" value="Provided" <?php if ($location_details[0]['electricity'] == 'Provided') echo 'checked'; ?>> Provided &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                            <input type="radio" name="electricity" value="Not Provided" <?php if ($location_details[0]['electricity'] == 'Not Provided') echo 'checked'; ?>> Not Provided<br>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group row">
+
+                                                                        <label class="col-sm-2 col-form-label" for="Website"><b>Website</b></label>
+
+                                                                        <div class="col-sm-6">
+
+                                                                            <input type="text" placeholder="Website" class="form-control" name="website" value="<?php echo $location_details[0]['website']; ?>" />
+
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                    <div class="form-group row">
+
+
+                                                                        <!-- <div  id="googleMap" style="width:100%;height:400px;"></div> -->
+                                                                        <label class="col-sm-2 col-form-label" for="Upload Booth Map"><b>Upload Booth Map</b></label>
+
+                                                                        <div class="col-sm-6">
+
+                                                                            <input type="file" class="form-control input-md" id="uploadFile" name="uploadFile" accept="image/*">
+
+                                                                            <input type="hidden" id="file_attachother" name="file_attachother" value="<?php if (isset($location_details[0]['location'])) {
+                                                                                                                                                            echo $location_details[0]['location'];
+                                                                                                                                                        } ?>" required>
+
+                                                                            <div id="msg"><?php if (isset($location_details[0]['location'])) {
+                                                                                                echo $location_details[0]['location'];
+                                                                                            } ?></div>
+
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group row">
+
+                                                                        <div id="containerother_kyc">
+                                                                            <?php if (isset($location_details[0]['location'])) {
+                                                                                ?>
+
+                                                                                <img id="myImage" width="500px" height="300px" src="<?php echo base_url() . 'assets/booth_img/' . $location_details[0]['location']; ?>" />
+
+                                                                            <?php  } ?>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="form-group row">
+
+                                                                        <div class="col-sm-4">
+
+                                                                            <div class="form-group row">
+
+                                                                                <div class="col-sm-10">
+
+                                                                                    <input type="button" class="btn btn-success sub-btn" value="<?php echo $this->lang->line('Add') ?> " id="submit-data123" data-loading-text="Creating...">
+
+
+                                                                                </div>
+
+
+                                                                            </div>
+
+                                                                            <input type="hidden" value="projects/addlocationforshow" id="action-url">
+
+                                                                            <input type="hidden" value="<?php echo $project['id']; ?>" name="nid">
+
+                                                                        </div>
+
+                                                                    </div>
+
+
+
+                                                                </form>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- Location -->
+                                                    <!-- BOOTH -->
+
+                                                    <div class="tab-pane fade" id="booths" role="tabpanel" aria-labelledby="booths-tab" aria-expanded="false">
+
+                                                        <!-- <p><a href="<?php echo base_url('projects/addshowbooth?id=' . $project['id']) ?>" class="btn btn-primary btn-sm rounded">
+
+                                                                <?php echo $this->lang->line('Add new') . ' ' . $this->lang->line('Booth') ?>
+
+                                                            </a>
+                                                        </p> -->
+
+                                                        <table id="boothTable" class="display " cellspacing="0" width="100%">
+
+                                                            <thead>
+
+                                                                <tr>
+
+                                                                    <th class="priority-3">#</th>
+
+
+
+                                                                    <th class="priority-1"><?php echo $this->lang->line('Size') ?></th>
+
+                                                                    <th class="priority-5"><?php echo $this->lang->line('Cost') ?></th>
+
+                                                                    <th class="priority-2"><?php echo $this->lang->line('Description') ?></th>
+
+                                                                    <th class="priority-6"><?php echo $this->lang->line('Product Category') ?></th>
+
+                                                                    <th class="priority-7"><?php echo $this->lang->line('Team Leader') ?></th>
+
+                                                                    <th class="priority-9">Action</th>
+
+
+
+                                                                </tr>
+
+                                                            </thead>
+
+                                                            <tbody>
+
+
+
+                                                            </tbody>
+
+                                                        </table>
+
+                                                    </div>
+
+                                                    <!-- Booth -->
+
+
+
+                                                </div>
+                                                <!--card-->
+
+                                            </div>
+                                            <!--card-body-->
+                                        </div>
+                                        <!--card-block-->
 
                                     </div>
-                                     <!-- Location -->
-
-                                     <div class="tab-pane fade" id="location" role="tabpanel" aria-labelledby="location-tab" aria-expanded="false">
-
-
-<div class="card card-block">
-
-    <div id="notify" class="alert alert-success" style="display:none;">
-
-        <a href="#" class="close" data-dismiss="alert">&times;</a>
-
-
-
-        <div class="message"></div>
-
-    </div>
-
-    <div class="grid_3 grid_4">
-
-
-
-
-
-        <form method="post" id="data_form" class="form-horizontal <?php if ($this->aauth->get_user()->roleid == 3) {
-                                                                        echo 'disablefield';
-                                                                    } ?>">
-
-
-
-            <h5><?php echo $this->lang->line('Location') ?> Info</h5>
-
-            <hr>
-
-            <div class="form-group row">
-
-                <label class="col-sm-2 col-form-label" for="contact_person"><b>Contact Person </b><i style="color:red">*</i></label>
-
-                <div class="col-sm-6">
-
-                    <input type="text" placeholder="Contact Person" class="form-control " name="contact_person" value="<?php echo $location_details[0]['contact_person']; ?>" />
-
-                </div>
-
-            </div>
-
-            <div class="form-group row">
-
-                <label class="col-sm-2 col-form-label" for="contact_number"><b>Contact Number </b><i style="color:red">*</i></label>
-
-                <div class="col-sm-6">
-
-                    <input type="text" placeholder="Contact Number" class="form-control " name="contact_number" value="<?php echo $location_details[0]['contact_number']; ?>" />
-
-
-
-                </div>
-
-            </div>
-
-            <div class="form-group row">
-
-                <label class="col-sm-2 col-form-label" for="extension"><b>Extension (if any)</b></label>
-
-                <div class="col-sm-6">
-
-                    <input type="text" placeholder="Extension" class="form-control" name="extension" value="<?php echo $location_details[0]['extension']; ?>" />
-
-                </div>
-
-            </div>
-
-
-
-            <div class="form-group row">
-
-
-
-                <label class="col-sm-2 col-form-label" for="indoor_outdoor"><b><?php echo $this->lang->line('Indoor') ?>/<?php echo $this->lang->line('Outdoor') ?><i style="color:red">*</i></b></label>
-
-                <div class="col-sm-4">
-
-                    <select name="indoor_outdoor" class="form-control ">
-
-
-
-                        <option value="1" <?php if ($location_details[0]['type'] == 1) echo 'selected'; ?>>Indoor</option>
-
-                        <option value="2" <?php if ($location_details[0]['type'] == 2) echo 'selected'; ?>>Outdoor</option>
-
-
-
-
-
-                    </select>
-
-                </div>
-
-
-
-
-
-            </div>
-
-
-
-
-
-            <div class="form-group row">
-
-                <label class="col-sm-2 col-form-label" for="address"><b><?php echo $this->lang->line('Address') ?><i style="color:red">*</i></b></label>
-
-                <div class="col-sm-6">
-
-                    <textarea placeholder="Address" class="form-control " name="address"><?php echo $location_details[0]['address']; ?></textarea>
-
-                </div>
-
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="Flooring"><b>Flooring</b></label>
-                <div class="col-sm-6">
-                    <input type="radio" name="required" value="Required" <?php if ($location_details[0]['flooring'] == 'Required') echo 'checked'; ?>> Required &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="required" value="Not Required" <?php if ($location_details[0]['flooring'] == 'Not Required') echo 'checked'; ?>> Not Required<br>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label" for="Electricity"><b>Electricity</b></label>
-                <div class="col-sm-6">
-                    <input type="radio" name="electricity" value="Provided" <?php if ($location_details[0]['electricity'] == 'Provided') echo 'checked'; ?>> Provided &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="electricity" value="Not Provided" <?php if ($location_details[0]['electricity'] == 'Not Provided') echo 'checked'; ?>> Not Provided<br>
-                </div>
-            </div>
-            <div class="form-group row">
-
-                <label class="col-sm-2 col-form-label" for="Website"><b>Website</b></label>
-
-                <div class="col-sm-6">
-
-                    <input type="text" placeholder="Website" class="form-control" name="website" value="<?php echo $location_details[0]['website']; ?>" />
-
-                </div>
-
-            </div>
-
-
-            <div class="form-group row">
-
-
-                <!-- <div  id="googleMap" style="width:100%;height:400px;"></div> -->
-                <label class="col-sm-2 col-form-label" for="Upload Booth Map"><b>Upload Booth Map</b></label>
-
-                <div class="col-sm-6">
-
-                    <input type="file" class="form-control input-md" id="uploadFile" name="uploadFile" accept="image/*">
-
-                    <input type="hidden" id="file_attachother" name="file_attachother" value="<?php if (isset($location_details[0]['location'])) {
-                                                                                                    echo $location_details[0]['location'];
-                                                                                                } ?>" required>
-
-                    <div id="msg"><?php if (isset($location_details[0]['location'])) {
-                                        echo $location_details[0]['location'];
-                                    } ?></div>
-
-                </div>
-
-            </div>
-
-            <div class="form-group row">
-
-                <div id="containerother_kyc">
-                    <?php if (isset($location_details[0]['location'])) {
-                        ?>
-
-                    <img id="myImage" width="500px" height="300px" src="<?php echo base_url() . 'assets/booth_img/' . $location_details[0]['location']; ?>" />
-
-                    <?php  } ?>
-                </div>
-
-            </div>
-            <div class="form-group row">
-
-                <div class="col-sm-4">
-
-                    <div class="form-group row">
-
-                        <div class="col-sm-10">
-
-                            <input type="button" class="btn btn-success sub-btn" value="<?php echo $this->lang->line('Add') ?> " id="submit-data123" data-loading-text="Creating...">
-
-
-                        </div>
-                        
-
-                    </div>
-
-                    <input type="hidden" value="projects/addlocationforshow" id="action-url">
-
-                    <input type="hidden" value="<?php echo $project['id']; ?>" name="nid">
-
-                </div>
-
-            </div>
-
-
-
-        </form>
-
-    </div>
-
-</div>
-
-</div>
-
-<!-- Location -->
-                                    </div>
-
-
-
                                 </div>
 
 
-                                
+
+
+
+
 
                                 <!-- Inventory  -->
 
@@ -1327,6 +1388,77 @@ foreach ($items as $item) {
 
 
         });
+
+        $('#boothTable').DataTable({
+
+"processing": true,
+
+"stateSave": true,
+
+'createdRow': function(row, data, dataIndex) {
+    $(row).attr('data-block', '0');
+},
+
+"ajax": {
+    "url": "<?php echo site_url('projects/getboothlistshow?id=' . $_GET['id']) ?>"
+},
+
+"columnDefs": [
+
+    {
+
+        "targets": [0],
+
+        "orderable": true,
+
+        "className": "priority-3",
+
+    },
+    {
+
+        "targets": [1],
+
+        "className": "priority-1",
+
+    },
+    {
+
+        "targets": [2],
+
+        "className": "priority-5",
+
+    },
+    {
+
+        "targets": [3],
+
+        "className": "priority-2",
+
+    },
+    {
+
+        "targets": [4],
+
+        "className": "priority-6",
+
+    },
+    {
+
+        "targets": [5],
+
+        "className": "priority-7",
+
+    },
+    {
+
+        "targets": [6],
+
+        "className": "priority-9",
+
+    },
+],
+
+});
 
 
 

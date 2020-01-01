@@ -76,12 +76,23 @@ class Projects_model extends CI_Model
     //Get Projec details
     private function _project_datatables_query($cday = '')
     {
+        $id=$this->aauth->get_user()->id;
+      
+        $where = "FIND_IN_SET($id,projects.employee_id)"; 
+
+
         $this->db->select("projects.*,customers.name AS customer");
         $this->db->from('projects');
         $this->db->join('customers', 'projects.cid = customers.id', 'left');
+      
 
         if ($cday) {
             $this->db->where('DATE(projects.edate)=', $cday);
+        }
+        if ($this->aauth->get_user()->roleid == 2) {//change by sagar---01-01-2019
+            //$this->db->where('employee_id',$id);
+            //$this->db->or_where( $where );
+            $this->db->like('employee_id', $id);
         }
 
 
