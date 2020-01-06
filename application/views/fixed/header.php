@@ -1082,12 +1082,13 @@ echo ' open';
                                 class="fa arrow"></i> </a>
 
                     <ul class="menu-content sidebar-green-backgrod">
-
+                   <?php if ($this->aauth->get_user()->roleid !=3 ) { ?><!-- changes by sagar date-06-01-2020-->
                         <li class="sidebar-green-backgrod">
 
                             <a href="<?php echo base_url(); ?>products/add"><?php echo $this->lang->line('New Product') ?></a>
 
                         </li>
+                   <?php }?>
 
                         <li class="sidebar-green-backgrod">
 
@@ -1106,7 +1107,7 @@ echo ' open';
                             <a href="<?php echo base_url(); ?>productcategory/warehouse"><?php echo $this->lang->line('Warehouses') ?></a>
 
                         </li>
-
+                        <?php if ($this->aauth->get_user()->roleid !=3 ) { ?><!-- changes teamleader strat by sagar date-06-01-2020-->
                         <li class="sidebar-green-backgrod">
 
                             <a href="<?php echo base_url(); ?>products/stock_transfer"><?php echo $this->lang->line('Stock Transfer') ?></a>
@@ -1123,7 +1124,8 @@ echo ' open';
                         <li class="sidebar-green-backgrod">
 
                             <a href="<?php echo base_url(); ?>productcategory/productcolor"><?php echo $this->lang->line('colormaster') ?></a>
-						</li>
+                        </li>
+                        <?php } ?><!-- end of changes teamleader by sagar date-06-01-2020-->
                     </ul>
 
                 </li>

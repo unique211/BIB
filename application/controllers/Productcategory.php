@@ -81,7 +81,13 @@ class Productcategory extends CI_Controller
 
         $this->load->view('fixed/header', $head);
 
-        $this->load->view('products/category', $data);
+        if($this->aauth->get_user()->roleid == 3){
+            $this->load->view('products/category1', $data);
+        }else{
+            $this->load->view('products/category', $data);
+        }
+
+      
 
         $this->load->view('fixed/footer');
     }
@@ -99,8 +105,11 @@ class Productcategory extends CI_Controller
         $head['usernm'] = $this->aauth->get_user()->username;
 
         $this->load->view('fixed/header', $head);
-
+        if($this->aauth->get_user()->roleid == 3){
+            $this->load->view('products/warehouse1', $data);
+        }else{
         $this->load->view('products/warehouse', $data);
+        }
 
         $this->load->view('fixed/footer');
     }

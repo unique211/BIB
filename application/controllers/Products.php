@@ -172,7 +172,13 @@ class Products extends CI_Controller
 
             $row[] = amountFormat($prd->product_price);
 
-            $row[] = '<a href="' . base_url() . 'products/edit?id=' . $pid . '" class="btn btn-primary btn-xs"><span class="icon-pencil"></span> ' . $this->lang->line('Edit') . '</a> <a href="#" data-object-id="' . $pid . '" class="btn btn-danger btn-xs  delete-object"><span class="icon-bin"></span> ' . $this->lang->line('Delete') . '</a>';
+            if($this->aauth->get_user()->roleid == 3 ){//change by sagar-06-01-2020-
+                $row[] = '-';
+            }else{
+                $row[] = '<a href="' . base_url() . 'products/edit?id=' . $pid . '" class="btn btn-primary btn-xs"><span class="icon-pencil"></span> ' . $this->lang->line('Edit') . '</a> <a href="#" data-object-id="' . $pid . '" class="btn btn-danger btn-xs  delete-object"><span class="icon-bin"></span> ' . $this->lang->line('Delete') . '</a>';
+            }
+
+          
 
             $data[] = $row;
         }
@@ -524,7 +530,7 @@ class Products extends CI_Controller
     }
 
     public function dtest(){
-        $id = "19";
+     $id = "19";
         echo  $this->products->getVariantId($id);
     }
 
@@ -758,9 +764,12 @@ class Products extends CI_Controller
             $row[] = $prd->title;
 
             $row[] = amountFormat($prd->product_price);
+            if($this->aauth->get_user()->roleid == 3 ){//change by sagar-06-01-2020-
+                $row[] = '-';
+            }else{
 
             $row[] = '<a href="' . base_url() . 'products/edit?id=' . $pid . '" class="btn btn-primary btn-xs"><span class="icon-pencil"></span> ' . $this->lang->line('Edit') . '</a> <a href="#" data-object-id="' . $pid . '" class="btn btn-danger btn-xs  delete-object"><span class="icon-bin"></span> ' . $this->lang->line('Delete') . '</a>';
-
+            }
             $data[] = $row;
         }
 
