@@ -112,7 +112,7 @@
                         <td>$code</td>
                         <td>$cat</td>
                         <td>$price</td>";
-                        if ($this->aauth->get_user()->roleid == 2) { 
+                        if ($this->aauth->get_user()->roleid == 2 || $this->aauth->get_user()->roleid == 3) { 
                             echo  "<td>-</td></tr>";
                         }else{
                         if($status==1){

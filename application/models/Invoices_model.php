@@ -170,6 +170,8 @@ class Invoices_model extends CI_Model
        
         $id=$this->aauth->get_user()->id;
 
+       // echo $id;
+
         $this->db->from($this->table);
        
 
@@ -177,6 +179,8 @@ class Invoices_model extends CI_Model
         if ($this->aauth->get_user()->roleid == 2) {//change by sagar---01-01-2019
            
             $this->db->where('salesperson_id', $id);
+        }else if($this->aauth->get_user()->roleid == 3){//change by sagar---06-01-2019
+            $this->db->where('`booth_id` IN (SELECT `id` FROM `showbooth` where teamleader_id LIKE "%'.$id.'%")', NULL, FALSE);
         }else{
             if ($opt) {
                 $this->db->where('invoices.eid', $opt);

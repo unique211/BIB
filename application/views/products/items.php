@@ -113,7 +113,7 @@
                     <td>$qty</td>
                     <td>$code</td>
                     <td>$cat</td>";
-                    if ($this->aauth->get_user()->roleid == 2) { 
+                    if ($this->aauth->get_user()->roleid == 2 || $this->aauth->get_user()->roleid == 3 ) { //change by Sagar----06-01-2019---
                         echo  "<td> <a href='" . base_url("products/viewproducts?id=$id") . "'  title='View Products' class='btn btn-primary btn-xs'><i class='icon-eye'></i></a>&nbsp;</td></tr>";
                     }else{
                     if($status==1){
